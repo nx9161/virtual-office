@@ -1,0 +1,35 @@
+name: ✨ Feature request
+description: Suggest something new for the office
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this solve?
+      description: What task, friction, or gap is this about? Who feels it?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What do you propose?
+      description: The idea, with enough detail for someone else to pick it up.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope / out of scope
+      description: What's included, and what this deliberately does not cover.
+  - type: checkboxes
+    id: rules
+    attributes:
+      label: House rules check
+      description: This repo's rules bind every employee.
+      options:
+        - label: This proposal respects `office/HOUSE_RULES.md` (no production deploys, no secrets, PRs required)
+          required: true
