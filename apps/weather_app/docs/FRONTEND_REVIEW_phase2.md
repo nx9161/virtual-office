@@ -1,5 +1,5 @@
 # Lead Mobile/Frontend Engineer — Presentation/Client Layer Critique
-**Weather App War Room, Phase 2** · 2026-10-06 · Reports to Sloane
+**War Room Phase 2 — Project: Weather App** · 2026-10-06 · Reports to Sloane
 
 I read all three docs end-to-end (ARCHITECTURE.md v1.0, PRD v1.0, design-spec v1.0) and cross-checked every claim against the other two. Verdict up front: the architecture is strong and I can build on it — **but there are two build-blocking contradictions between the docs, one false "1:1 mapping" claim at the heart of the UI contract, and a layering rule that is unenforceable as written.** Details below.
 
