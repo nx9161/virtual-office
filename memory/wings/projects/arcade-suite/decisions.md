@@ -257,3 +257,21 @@
   currents, ebb-opens, scatter); Atari-v.-Philips differentiation filed.
 - Repo shall be nx9161/tidelantern. "moondrift" barred from all materials.
 - Suite slate updated: MOONDRIFT -> TIDELANTERN.
+
+## ADR-2026-10-07-AS-13: TIDELANTERN shipped to production (second suite title)
+- 2026-10-07: nx9161/tidelantern built from arcade-template v1.0.1, deployed
+  to https://tidelantern-nx9161s-projects.vercel.app (Vercel project
+  prj_dEzVfw0tQ9Tz865WxXjd8cj9xtcX, main, auto-deploy).
+- Verification: 20/20 headless logic (5 fish identical params, maze seed
+  flips every tide, 25.6% tiles change passability, win via real deposit
+  path, loss on 3 strikes + darkness=100, calm endless); 18/18 in-browser
+  play QA (zero JS errors, steering, pause/mute, win/lose overlays, surge
+  reconfig live); release-check green (6 headers, 404s, byte-identity);
+  forbidden greps clean (no moondrift/beaconfall/dot-vocabulary).
+- Judgment calls: deposit automatic on contact (one-verb UI); reservoir =
+  jellyfish glow radius; darkness = vignette + deepening drone (no siren);
+  shared.js functionally frozen (comment-only token substitution; "contract"
+  -> "interface" for CI's contra false-positive); real bug caught in QA —
+  arrow keys read lowercase vs template's capitalized normKey, fixed and
+  redeployed; debug hook window.TL_DEBUG gated behind ?debug.
+- Design commitments from the clearance record held; no drift.
