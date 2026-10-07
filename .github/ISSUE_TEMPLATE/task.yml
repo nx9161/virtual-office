@@ -1,0 +1,28 @@
+name: Office task
+description: Give the office a piece of work
+title: "[task] "
+labels: ["task"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What do you want?
+      description: The raw request — the Prompt Writer will perfect it before anyone acts on it.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Links, screenshots, constraints, deadlines — anything the office should know.
+  - type: dropdown
+    id: warroom
+    attributes:
+      label: Needs a War Room?
+      description: Significant work (architecture, auth, payments, personal data, AI behavior) must go through the War Room.
+      options:
+        - Not sure — let Sloane decide
+        - "Yes"
+        - "No — small, well-defined task"
+    validations:
+      required: true

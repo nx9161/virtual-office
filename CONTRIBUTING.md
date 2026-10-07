@@ -1,6 +1,6 @@
 # Contributing
 
-Welcome to the Virtual IT Office. Every contributor — human or agent —
+Welcome to War Room Protocol. Every contributor — human or agent —
 works the same way.
 
 ## Ground rules
@@ -15,29 +15,33 @@ The binding source of truth is
   `refactor:`, `test:`. One logical change per commit.
 - **Everything goes through a PR.** No exceptions. The PR template
   covers summary, how to test, screenshots, migration notes, checklist.
-- **Never merge your own PR.** QA review is required, and only the owner
-  merges to `main`.
+- **Never merge your own PR.** QA Manager review is required, and only
+  the owner merges to `main`.
 
 ## Workflow
 
-1. Pick up work from a GitHub Issue (or get assigned one). Issues are the
-   source of truth for the task board.
+1. Pick up work from a GitHub Issue (or get assigned one). Issues are
+   the source of truth for the task board.
 2. Create a branch from `main` with the right prefix.
-3. Do the work, run the tests, commit with a conventional message.
-4. Open a PR from your branch to `main`. Fill out the PR template.
-5. Request qa-engineer review. Address feedback. Wait for the owner to merge.
+3. Significant work goes through the War Room first (see
+   `office/playbooks/war-room.md`): Phase 0 prompt perfection + wizard
+   briefing, then Phases 1–4.
+4. Do the work, run the checks (`python3 office/scripts/validate_repo.py`),
+   commit with a conventional message.
+5. Open a PR from your branch to `main`. Fill out the PR template.
+6. Address review feedback. Wait for the owner to merge.
 
 ## Safety
 
 - Never commit secrets, tokens, keys, or credentials — in code, issues,
   or logs.
-- No spending money, no external messages/posts, no data deletion, and no
-  production deploys without explicit owner approval.
+- No spending money, no external messages/posts, no data deletion, and
+  no production deploys without explicit owner approval.
 - Record decisions in `office/log/decisions.md` (date, context, decision,
   owner).
 
 ## If you're stuck
 
 Escalate ambiguity, cost, irreversible actions, or anything
-security-related to the Office Manager. A blocked employee is cheaper
-than a wrong autonomous decision.
+security-related to Sloane. A blocked employee is cheaper than a wrong
+autonomous decision.

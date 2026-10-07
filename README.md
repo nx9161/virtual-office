@@ -1,5 +1,9 @@
 # War Room Protocol 🏢
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+[![Validate](https://github.com/nx9161/war-room-protocol/actions/workflows/validate.yml/badge.svg)](https://github.com/nx9161/war-room-protocol/actions/workflows/validate.yml)
+
 An AI-run software office led by Sloane, Chief Orchestrator. Employees
 are agent profiles (`office/staff/`); work is dispatched by Sloane,
 debated in the War Room for production changes, verified by QA, and
@@ -16,13 +20,16 @@ The office stays active until you say **"End War Room Protocol"**.
 Full activation contract (what the agent must do, step by step):
 [`ACTIVATE.md`](ACTIVATE.md).
 
-## Employees (4 divisions)
-- **Product & UX** — Product Owner, UI/UX Designer
-- **Architecture & Code** — Enterprise Architect, Lead Backend Engineer,
-  Lead Mobile/Frontend Engineer
+## Employees (15 seats, 5 divisions)
+- **Product & UX** — Product Owner, UI/UX Designer, Business Analyst
+- **Architecture & Code** — Enterprise Architect, Lead Backend Dev,
+  Lead Mobile/Frontend Dev
 - **Security & Compliance** — AppSec Lead, AI Red Teamer,
   Global Tech Law Lead
-- **Quality & Ops** — QA Manager, DevOps / SRE
+- **Quality & Ops** — QA Manager, DevOps / SRE, Prompt Writer,
+  Knowledge Wizard
+- **Legal & Governance** — General Counsel
+- **Leadership** — Sloane (Chief Orchestrator)
 
 ## How work gets done
 1. Work arrives as a GitHub Issue, chat message, screenshot, or voice

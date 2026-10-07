@@ -17,7 +17,7 @@
    - *Rate limiting:* PRD §8 enforcement is client-side budgets (debounce, dedupe, TTLs, retry cap). A BFF would not improve this — it would make it **worse**: Open-Meteo's fair-use enforcement is effectively per source IP, so a proxy would concentrate all users behind a handful of egress IPs and *increase* the probability of 429s while destroying per-device attribution. Client-direct is strictly better for quota.
    - *GDPR:* a proxy would make us a data controller/processor for location-bearing requests; direct calls keep Open-Meteo as the sole (disclosed) recipient. Data minimization favors no middleman.
    - *SLA risk* (PRD §14: no SLA on a free API) is not solvable by a proxy — FM-2/FM-6 handling is the mitigation, and it's client-side either way.
-   
+
    **Verdict: ADR-01 stands.** Recommend strengthening its rationale with the per-IP quota-aggregation and GDPR-controller arguments above, so a future "let's add a BFF" is not relitigated.
 
 2. **Dio over `package:http` (ADR-11)** — correct call; retry/rate-limit/sanitized-logging as interceptors keeps the policy in one testable place instead of scattered at call sites.
