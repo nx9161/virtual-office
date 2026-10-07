@@ -331,3 +331,20 @@
   meadow/storm UI vocabulary ("hyperspace"/"shields" banned).
 - Repo shall be nx9161/seedrift. "seedstorm" and "hailseed" barred from all
   materials. Suite slate updated. Gates are 4-for-4 on kills.
+
+## ADR-2026-10-07-AS-17: SEEDRIFT shipped to production (fourth flagship)
+- 2026-10-07: nx9161/seedrift @ b0c50ee built from template v1.0.1, deployed
+  to https://seedrift-nx9161s-projects.vercel.app (Vercel project
+  prj_YaZOHZKubR9B9sDUmJfe74Pxycpz, main, auto-deploy).
+- Design: dandelion seed, PERMANENT MOMENTUM NO BRAKES (lateral nudges only,
+  up/down ignored, min-speed re-enforced after wall bounces); telegraphed
+  storm cells ("gust incoming" shimmer -> hail); threading = crossing cell
+  band while active without strike, bonus 25xcombo; 100-mile distance
+  objective (~3-4 min skilled ember); 3 tuft-integrity pips, strike knocks
+  seed downwind + 1.6s invuln; ZERO power-ups; soft-bounce storm-front walls
+  (no wrap); watercolor storm-sky (no neon-vector); meadow/storm vocabulary.
+- Verification: 17/17 headless (real game.min.js); win branch verified on
+  test bundle ("The far meadow!"); release-check all-green; forbidden greps
+  clean (no seedstorm/hailseed/hyperspace/shields); terser 5.51.2,
+  27,607 -> 14,933 B. Calm skips difficulty select (proven bypass).
+- Live-browser QA outstanding (delegated). All four flagships now shipped.
