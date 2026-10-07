@@ -63,6 +63,21 @@ Counsel (in parallel):
 - Sloane synthesizes the War Room record, authorizes the release, and
   reports to the owner.
 
+## Phase regression (loop-back rule)
+Phases are not one-way. If a finding in Phase N invalidates or
+materially changes the output of an earlier Phase M:
+1. The seat that found it flags it immediately, with evidence. Work in
+   later phases pauses.
+2. Sloane decides: loop back to Phase M (re-running M→N with the new
+   finding as input), or rule the finding immaterial and continue.
+3. Every loop-back is recorded: iteration number, trigger, what
+   changed. Bounded — max 3 regressions per request. On the 4th
+   trigger, Sloane must choose: escalate to the owner with options,
+   or terminate the request.
+4. A re-run phase re-issues its outputs (updated PRD, revised specs).
+   Downstream phases always work from the latest version, never stale
+   output.
+
 ## Rules
 - Skipping the War Room for production changes requires Sloane's
   explicit waiver, recorded as an ADR.

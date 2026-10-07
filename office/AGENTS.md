@@ -94,6 +94,11 @@ Small, well-defined fixes may skip with Sloane's recorded waiver.
   commits, PRs). QA Manager enforces 100% pass + no open blockers.
   Sloane synthesizes, authorizes, reports.
 
+**Phase regression:** phases are not one-way — a finding that changes
+an earlier phase's output loops the request back (max 3 regressions,
+then escalate or terminate). **Sloane monitors every phase gate** and
+decides: advance, loop back, re-scope, pause, escalate, or terminate.
+
 Every phase conclusion is recorded as an ADR (date, context, decision,
 owner) in the Memory Palace.
 

@@ -61,3 +61,16 @@
   Tabletop mode for platforms without subagents: labeled seats in phase
   order inside one response. Chief staff files updated with loop duty.
 - **Owner:** Naman
+
+## 2026-10-07 — Phase regression + Chief monitor authority
+- **Context:** Owner wants every request to flow through phases, with
+  loop-back when a later phase's finding invalidates earlier output,
+  and the Chief holding full decision power.
+- **Decision:** Added phase regression rule to the war-room playbook:
+  phases are not one-way; new findings loop back (max 3 regressions
+  per request, then escalate or terminate); re-run phases re-issue
+  outputs. Chief (Sloane/Mercer) monitors every phase gate with full
+  operational authority: advance, loop back, re-scope, pause, escalate,
+  terminate. Hard boundaries preserved: money, production deploys, and
+  external commitments still need the owner's explicit approval.
+- **Owner:** Naman
