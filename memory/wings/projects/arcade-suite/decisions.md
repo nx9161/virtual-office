@@ -237,3 +237,23 @@
   accepted as design; (b) Calm mode routes through difficulty select whose
   copy implies danger in a threat-free mode — queued as a polish fix (skip
   difficulty select in Calm).
+
+## ADR-2026-10-07-AS-12: TIDELANTERN clears the MOONDRIFT gate (MOONDRIFT killed)
+- 2026-10-07: second per-title gate, high-legal-heat track. "MOONDRIFT"
+  KILLED in-room: "Moondrift Memory" (active 2025 cRPG, Streetlight Studio,
+  exact leading element) + "Moon Drift" (P2E racing, same goods class) +
+  "Driftmoon" (Steam RPG, reversed morphemes). Requires legal argument to
+  defend -> renamed per standing rule.
+- Selected: TIDELANTERN (tidepool + lanternfish photophores, biologically
+  grounded). Rescreen clean across all venues; variants checked. Dual-signed
+  CONDITIONAL PASS.
+- Locked design: FIVE lanternfish, no archetypes, emergent bio/current
+  behavior (counterillumination tracking, current-riding, school scatter,
+  diel-rhythm patrol); deposit-light objective (relight dark reef nodes,
+  win = restoration threshold, lose = 3 strikes or reef-darkness timer);
+  NO dot-consumption vocabulary; expression bans binding (no mouths/eyes,
+  no ghost bodies, no chomping, no siren escalation, no stable layouts);
+  flooding provably routing-altering (impassable/low corridors, one-way
+  currents, ebb-opens, scatter); Atari-v.-Philips differentiation filed.
+- Repo shall be nx9161/tidelantern. "moondrift" barred from all materials.
+- Suite slate updated: MOONDRIFT -> TIDELANTERN.
