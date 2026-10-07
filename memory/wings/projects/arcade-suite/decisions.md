@@ -133,3 +133,16 @@
 - Next: Prompt Writer perfects the arcade-template bootstrap prompt, then
   BEACONFALL enters its Phase 3 per-title IP gate. Per-title builds are
   follow-on workstreams.
+
+## ADR-2026-10-07-AS-06: Owner decisions — opt-out waived, Ko-fi deferred, migratability locked
+- 2026-10-07: owner was briefed on the Vercel AI model-training opt-out (what
+  it is, Hobby-default ingestion, irreversibility) and chose to SKIP it.
+  AppSec's hard pre-deploy condition (§6.6) is WAIVED by owner decision;
+  deploys continue under Hobby defaults with training ingestion possible.
+  Recorded as informed risk acceptance, not an oversight.
+- Owner may change deployment strategy later: migratability is now a standing
+  requirement — static output only, zero Vercel-specific code in game repos,
+  headers mirrored in vercel.json + _headers (1:1), Cloudflare Pages cutover
+  plan on file, Vercel projects go dormant-not-deleted on migration.
+- Ko-fi: DEFERRED until first title nears launch. KOFI-HANDLE token stays a
+  blocking release-gate item; owner supplies handle when ready.
