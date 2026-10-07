@@ -83,3 +83,23 @@ domain — free on Hobby, instant certs, kills the Pages saga permanently.
   deployment untouched (watcher goal still owns the cert issue).
 - Sole remaining action (owner, manual): Vercel AI model-training opt-out in
   team settings — account privacy control I cannot flip for him.
+
+## ADR-2026-10-07-VG-11: Keyboard + difficulty shipped 2026-10-07 ~16:47 EDT
+- Standing owner order: "Merge everything into main when its done dont wait
+  for permission" — merges no longer gated per-PR for this game workstream.
+- PR #5 keyboard steering (arrows/WASD, same velocity-easing model as
+  pointer): 21/21 headless checks + 9/9 real-browser QA pass. Merged
+  20:36:23Z; production verified serving the build.
+- PR #6 difficulty select + hunter retreat (war room: Prompt Writer spec,
+  PO+UI/UX locked design): mode select (arcade/calm) → difficulty select
+  (ember/lantern/wildfire, per-mode prompts + flavor text) → run. Hunter
+  reworked to 40s duty cycle (present/absent 10/30 ember, 20/20 lantern,
+  30/10 wildfire) with telegraphed returns; calm difficulty tunes engagement
+  only (mote density/pacing), never threats. 72/72 headless checks + 8/8
+  real-browser QA pass (preview deployment, gating relaxed for QA then
+  restored to preview-only SSO).
+- PR #6 was stacked on the keyboard branch; rebased onto main after #5
+  merged, base retargeted, merged 20:46:39Z. Production verified live
+  (57,127 bytes, difficulty markers present).
+- Security posture intact: headers live, excluded paths 404, minified-only
+  servings, previews gated, production public.
