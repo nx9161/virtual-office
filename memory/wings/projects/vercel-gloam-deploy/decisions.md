@@ -72,3 +72,14 @@ domain — free on Hobby, instant certs, kills the Pages saga permanently.
   fixed in PR #3 (one-line text change), open pending owner merge.
 - GC condition outstanding: owner flips AI model-training opt-out in Vercel
   team settings (manual, dashboard).
+
+## ADR-2026-10-07-VG-10: CLOSED 2026-10-07 ~15:58 EDT — final results
+- Owner: "Get EVerything done" — PR #3 merged (label fix). Pages built; live
+  bytes verified: url-line label AND card href both
+  gloam-nx9161s-projects.vercel.app.
+- Mission complete: GLOAM serves over valid HTTPS from Vercel free tier,
+  all security headers, excluded paths 404, bytes identical to repo,
+  real-browser play verified. Hub links to it. Zero spend. Old GitHub Pages
+  deployment untouched (watcher goal still owns the cert issue).
+- Sole remaining action (owner, manual): Vercel AI model-training opt-out in
+  team settings — account privacy control I cannot flip for him.
