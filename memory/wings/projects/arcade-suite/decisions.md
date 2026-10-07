@@ -275,3 +275,20 @@
   arrow keys read lowercase vs template's capitalized normKey, fixed and
   redeployed; debug hook window.TL_DEBUG gated behind ?debug.
 - Design commitments from the clearance record held; no drift.
+
+## ADR-2026-10-07-AS-14: REEDLIGHT clears the MARSHLIGHT gate (MARSHLIGHT killed)
+- 2026-10-07: third per-title gate. "MARSHLIGHT" KILLED in-room: Marshlight
+  Software is an active indie game dev/publisher (The Edgelands, Steam 2017)
+  — near-identical trade name in interactive entertainment; defending the
+  distinction requires legal argument -> renamed per standing rule.
+- Candidates killed in-room: EMBERWISP (Mobile Legends skin, crowded
+  in-class); FENLIGHT (Kodi addon ecosystem). Selected: REEDLIGHT (the
+  fiction's destination — the far reed bed). Rescreen clean; WoW player
+  character + fangame location are UGC, not marks. Dual-signed PASS.
+- Locked design: firefly carries last ember to far reed bed; LIGHT AS FUEL
+  (glow depletes with movement + in darkness; glow-motes replenish; light
+  death = loss); hazard taxonomy wholly original (no borrowed obstacle
+  taxonomies/speeds/progression); light-as-health visual language; original
+  night-marsh art + guttering-wind audio.
+- Repo shall be nx9161/reedlight. "marshlight" barred from all materials.
+- Suite slate updated: MARSHLIGHT -> REEDLIGHT. Gates are 3-for-3 on kills.
