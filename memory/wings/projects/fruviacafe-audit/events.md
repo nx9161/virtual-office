@@ -1,0 +1,10 @@
+# fruviacafe-audit — events.md
+
+- 2026-10-06 22:08 EDT — Owner request received: full company-grade QA audit of https://fruviacafe.com via war room (all 11 roles), plus legal-actions memo, rebuild pricing, and pitch script for pitching the cafe owner as a client.
+- 2026-10-06 22:09 EDT — War room convened. Memory room created at memory/wings/projects/fruviacafe-audit/. Phases 1+2 dispatched in parallel (7 agents: PO, QA Mgr, UI/UX, Architect, FE, BE, DevOps).
+- 2026-10-06 ~22:10 EDT — Phase 1+2 reports received (7/7). Key findings: ASP.NET MVC 5.2/PW Foods white-label; GET-based PII/password transmission; wrong-domain sitemap; broken ~/ images; no privacy notice at collection (policy page exists); multi-MB PNGs; missing security headers; www dead.
+- 2026-10-06 ~22:14 EDT — Phase 3 dispatched (AppSec, AI Red Teamer, Tech Law). Pricing research completed (2026 market anchors).
+- 2026-10-06 ~22:15 EDT — Phase 3 complete (3/3). AppSec: BLOCK verdict (OWASP quick-pass, 6 categories). AI Red Team: explicit N/A (no AI surface). Tech Law: legal-actions memo delivered (sales intelligence, vendor-position ruling, P0–P3 remediation roadmap).
+- 2026-10-06 ~22:16 EDT — Phase 4 synthesis complete. Four deliverables written to ~/workspace/fruviacafe-audit/: findings-register.md (4 Critical/12 High/14 Medium/6 Low), legal-actions-memo.md, rebuild-proposal-pricing.md (3 tiers), pitch-script.md. Memory halls written; INDEX.md milestone logged.
+- Read-only throughout: no forms submitted, no uploads, no logins, no contact with site owner, no PRs.
+- Open: live-browser phase (form behavior, mobile render, contrast, Web Vitals, cross-browser) if owner wants deeper evidence before the pitch.

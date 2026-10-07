@@ -80,3 +80,11 @@ Mission: production-grade Flutter weather app (Android minSdk 24, iOS 15.0+), Op
 - B5/B6: `tool/bootstrap.sh` (idempotent) — requires Flutter SDK, `flutter create` only for missing scaffolds, checksums/restores `data_extraction_rules.xml` (B-5), runs `flutter pub get`, prints manual steps; `pubspec.lock` committed by first operator run (CI `--enforce-lockfile` unchanged; `.github/workflows/weather_app.yml` references all-existing paths — untouched).
 - B7: README "Setup" step 0 = bootstrap; new "Manual platform steps" section (Android manifest `usesCleartextTraffic=false` + `dataExtractionRules`; iOS `NSURLIsExcludedFromBackupKey` on the Documents dir = hive_ce_flutter's `initFlutter()` directory, in AppDelegate before plugin registration).
 - No SDK on this VM — `flutter analyze/test` not run; CI is the verification gate. Not committed (Sloane commits after QA).
+## War Room complete — delivered 2026-10-06/07
+- **PR:** #3 `feat/weather-app-qa-fixes` — full Flutter app (lib/, test/ 300+ assertions, tool/build.sh, tool/bootstrap.sh, CI workflow, README) + all QA-gate fixes. **Not merged — awaiting owner.**
+- **Intake issue:** #4 "Project: Weather App" (labeled `ready`), PR linked in comment.
+- **Initial ADR (project kickoff):** client-only Flutter app, Open-Meteo keyless APIs, Riverpod 3, zero-trust two-tier validation, GDPR consent-first geolocation — see `apps/weather_app/docs/WAR_ROOM_RECORD.md` for all 18 rulings + Phase 3 verdicts.
+- **Security/compliance final:** AppSec BLOCK cleared as B-1…B-7 (implemented + backend-verified); Red Team conditional clear (body-size gate landed); Tech Law clear with C1–C7 (C3/F1–F4 = owner actions).
+- **Verification gaps (merge prerequisites):** `flutter analyze/test` not run (no SDK on build VM) — CI on PR #3; operator runs `tool/bootstrap.sh` once + commits `pubspec.lock`; device runs needed for perf/a11y/staged rollout.
+- **Incident 2026-10-06 21:22 EDT:** parent committed a partial mid-build snapshot directly to main (`38a7a53`, pushed) while the War Room was in flight — bypassed the PR flow; the complete app arrived via PR #3 instead. Stale branch `feat/weather-app` (at ec517fd) superseded by `feat/weather-app-qa-fixes`.
+- **Repo visibility:** repo made PUBLIC (MIT) 2026-10-06 — owner to confirm intended.
