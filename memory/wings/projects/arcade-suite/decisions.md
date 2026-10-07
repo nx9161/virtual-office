@@ -146,3 +146,20 @@
   plan on file, Vercel projects go dormant-not-deleted on migration.
 - Ko-fi: DEFERRED until first title nears launch. KOFI-HANDLE token stays a
   blocking release-gate item; owner supplies handle when ready.
+
+## ADR-2026-10-07-AS-07: Full 36-title concept slate locked
+- War room (PO + UI/UX + Growth, Chief presiding): 31 new original concepts
+  locked + 4 flagships = 35 inspirations mapped (Ms. Pac-Man shares the
+  maze-chase loop family with a differentiated concept).
+- PO killed 3 drafts in-room (Centipede caterpillar-shooter: expressive rhyme;
+  Paperboy drone-delivery: lazy reskin; Mortal Kombat bone-golem: gore rhyme)
+  and replaced with DEWLINE, POSTWING, STRAWFALL.
+- Every concept carries: genuine mechanical twist (one load-bearing twist
+  each), viral mechanic, UI scheme (≤2 simultaneous inputs), retention hook.
+- Suite-wide systems: share cards everywhere, rotating daily suite challenge
+  (one title/day, fixed seed + dev par), rival hooks via anonymous codes,
+  clutch detection, personal-best leaderboards until post-revenue.
+- Suite-wide UI law: one verb, zero-text tutorial (first 15s teaches), thumb
+  + key parity.
+- Formal trademark screening runs per title at build gates (not at concept).
+  No title builds before its Phase 3 per-title IP gate.
