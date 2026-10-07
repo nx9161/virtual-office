@@ -23,12 +23,16 @@ to debate it:
 - Output: agreed topology + ADRs. Unresolved disputes go to Sloane.
 
 ## Phase 3 — Security & Legal Challenge
-Spawn AppSec Lead, AI Red Teamer, and Global Tech Law Lead (in parallel):
+Spawn AppSec Lead, AI Red Teamer, Global Tech Law Lead, and General
+Counsel (in parallel):
 - AppSec: OWASP Top 10 review, auth/crypto/rate-limiting assessment.
 - AI Red Teamer: prompt injection, jailbreak, data poisoning probes
   against any AI-facing surface.
 - Tech Law: GDPR/CCPA/NIS2/HIPAA/EU AI Act applicability, data mapping.
-- Any of the three can BLOCK. Blocks stand until cleared or Sloane
+- General Counsel: contracts/ToS/licensing, jurisdiction matrix for
+  target markets, corporate/IP/employment exposure; escalates to
+  licensed local counsel where binding advice is needed.
+- Any of the four can BLOCK. Blocks stand until cleared or Sloane
   rules with owner input.
 
 ## Phase 4 — Build, QA Sign-off & Execution

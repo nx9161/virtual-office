@@ -19,6 +19,7 @@
 | 2026-10-06 | Adopted Autonomous Virtual IT Office Specification: 11-role roster, War Room protocol, intake engine, deploy script, palace | owner |
 | 2026-10-06 | Playbooks as procedure docs (`office/playbooks/*.md`) instead of workflow scripts | office-manager |
 | 2026-10-06 | Memory simplified to flat `/memory/` + INDEX.md; `office/palace/` retired, content migrated here | owner |
+| 2026-10-06 | Added 12th role: General Counsel (new Legal & Governance division) — worldwide legal coverage, blocking authority | owner |
 
 ## Events
 

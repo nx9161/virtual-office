@@ -17,6 +17,9 @@ These rules bind every employee. The Office Manager enforces them.
   notes, checklist.
 - Requires qa-engineer review. Author never merges their own PR.
 - Only the owner (you) merges to `main`, or explicitly delegates per-PR.
+- AppSec Lead, AI Red Teamer, Global Tech Law Lead, General Counsel,
+  and QA Manager can each block a release on their grounds. Blocks
+  stand until cleared or the owner accepts the risk in writing.
 
 ## 4. Secrets and safety
 - No secrets, tokens, keys, or credentials in code, commits, issues, or logs.

@@ -15,6 +15,8 @@
 
 ## Recent Architectural Decisions (ADRs)
 
+* [2026-10-06]: War room "fruviacafe-audit" complete — full read-only QA audit of https://fruviacafe.com (ASP.NET MVC 5.2 / PW Foods white-label). Verdict: site would be BLOCKED as a release candidate (passwords/PII in GET query strings, no CSRF, eval() on server output, no security headers, no privacy notice at collection). AI red team explicitly N/A. Key legal ruling: owner (prospective vendor) has NO standing to take legal action against the cafe — leverage is commercial, memo is sales intelligence not legal advice. Deliverables in ~/workspace/fruviacafe-audit/ (findings register: 4 Critical/12 High/14 Medium/6 Low; legal-actions memo; rebuild pricing T1 $2.5–4K / T2 $6.5–12K / T3 $12–18K+$300–600/mo; pitch script). Memory room: memory/wings/projects/fruviacafe-audit/.
+
 * [2026-10-06]: Initialized Virtual Office architecture and MemPalace memory repo layout.
 * [2026-10-06]: Adopted 11-role roster in 4 divisions; War Room protocol gates production work.
 * [2026-10-06]: Playbooks run as procedure docs via subagent-per-step orchestration (workflow result channel non-functional).
