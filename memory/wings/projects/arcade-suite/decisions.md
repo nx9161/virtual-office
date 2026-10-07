@@ -310,3 +310,24 @@
   calm skips difficulty select (BEAMTIDE-proven bypass); terser 5.51.2,
   29,128 -> 15,007 B.
 - Live-browser QA outstanding (delegated). Hub cutover deferred.
+
+## ADR-2026-10-07-AS-16: SEEDRIFT clears the SEEDSTORM gate (SEEDSTORM + HAILSEED killed)
+- 2026-10-07: fourth flagship gate. "SEEDSTORM" KILLED: "SEEDSTORM:
+  Deterministic Strike" (QSOL-IMC, active maintained browser game) — identical
+  mark, same goods class, fatal. First replacement "HAILSEED" also KILLED:
+  one-letter visual near-neighbor of "HELLSEED" (active Steam horror FPS,
+  Profenix Studio) in the same industry — defending requires legal argument.
+  "PAPPUS" rejected pre-screen (Choost Games mark).
+- Selected: SEEDRIFT (coined compound, seed that drifts). Zero game-title
+  hits; only generic-suffix neighbors (Adrift, Emberdrift, Driftmoon).
+  Dual-signed CONDITIONAL PASS.
+- Locked design: dandelion seed, PERMANENT MOMENTUM NO BRAKES (lateral
+  wind-nudges only — no thrust, no rotation, no stop); ZERO power-ups ship
+  (no pickups, no taxonomy — cleanest posture); telegraphed storm cells
+  (warning shimmer) as hazard + scoring unit; distance objective ("miles to
+  the meadow"); scoring = survival time + distance + threading gust-combos,
+  no per-kill points; bounded arena, storm-front walls, soft bounce, NO
+  wrap-around; watercolor storm-sky art (no neon-on-black vector look);
+  meadow/storm UI vocabulary ("hyperspace"/"shields" banned).
+- Repo shall be nx9161/seedrift. "seedstorm" and "hailseed" barred from all
+  materials. Suite slate updated. Gates are 4-for-4 on kills.
