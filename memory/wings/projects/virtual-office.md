@@ -21,6 +21,7 @@
 | 2026-10-06 | Memory simplified to flat `/memory/` + INDEX.md; `office/palace/` retired, content migrated here | owner |
 | 2026-10-06 | Added 12th role: General Counsel (new Legal & Governance division) — worldwide legal coverage, blocking authority | owner |
 | 2026-10-06 | Added 13th role: Business Analyst (Product & UX) — P&L, pricing intelligence, business tips; War Room Phase 1 | owner |
+| 2026-10-06 | Added 14th role: Prompt Writer (Quality & Ops) — refines raw prompts, all agents use perfected version, closed-loop to done | owner |
 
 ## Events
 

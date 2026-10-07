@@ -15,6 +15,8 @@
 
 ## Recent Architectural Decisions (ADRs)
 
+* [2026-10-06]: Tier 1 charging model set by 2nd focused war room — fixed-price **$3,500** (conditional **$2,800** limited-access variant if PW Foods denies code access); 50% deposit / 25%+25% milestones; 29-item SOW mapped to finding IDs; per-finding sign-off gate (security+privacy = hard blockers); 30-day warranty on regressions only; GO/NO-GO requires written PW Foods cooperation statement before signing. ADR in memory/wings/projects/fruviacafe-audit/decisions.md.
+
 * [2026-10-06]: War room "fruviacafe-audit" complete — full read-only QA audit of https://fruviacafe.com (ASP.NET MVC 5.2 / PW Foods white-label). Verdict: site would be BLOCKED as a release candidate (passwords/PII in GET query strings, no CSRF, eval() on server output, no security headers, no privacy notice at collection). AI red team explicitly N/A. Key legal ruling: owner (prospective vendor) has NO standing to take legal action against the cafe — leverage is commercial, memo is sales intelligence not legal advice. Deliverables in ~/workspace/fruviacafe-audit/ (findings register: 4 Critical/12 High/14 Medium/6 Low; legal-actions memo; rebuild pricing T1 $2.5–4K / T2 $6.5–12K / T3 $12–18K+$300–600/mo; pitch script). Memory room: memory/wings/projects/fruviacafe-audit/.
 
 * [2026-10-06]: Initialized Virtual Office architecture and MemPalace memory repo layout.
@@ -26,3 +28,4 @@
 * [2026-10-06]: War Room complete for Project: Weather App — PR #3 (full Flutter app + QA-gate fixes) open, awaiting owner merge; intake issue #4. AppSec BLOCK cleared as B-1..B-7, Red Team conditional clear, Tech Law clear with C1–C7 (C3/F1–F4 = owner actions). Merge prerequisites: CI flutter analyze/test green, bootstrap + pubspec.lock, device runs for perf/a11y.
 * [2026-10-06]: Added 12th role — General Counsel (Legal & Governance division), worldwide legal coverage with blocking authority.
 * [2026-10-06]: Added 13th role — Business Analyst (Product & UX), commercial P&L + pricing intelligence; joins War Room Phase 1.
+* [2026-10-06]: Added 14th role — Prompt Writer (Quality & Ops): prompt refiner + closed-loop finisher; intake pipeline now starts with perfect-then-parse.

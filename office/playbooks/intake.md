@@ -5,8 +5,12 @@ triage worker) runs this on every incoming request.
 
 ## Pipeline
 ```
-[ Prompt / Image / Audio ] → [ Intake parse ] → [ War Room or ship-feature ] → [ Deploy ]
+[ Raw prompt ] → [ Prompt Writer: perfect ] → [ Intake parse ] → [ War Room or ship-feature ] → [ Deploy ]
 ```
+Every agent downstream works from the perfected prompt, never the raw
+one. The Prompt Writer also owns the closed loop: it verifies each
+deliverable against the acceptance criteria and retries (max 3, each
+retry changing something) before escalating to Sloane.
 
 ## 1. Text (chat messages, GitHub issues)
 - Parse intent: what is wanted, constraints, deadline signals.

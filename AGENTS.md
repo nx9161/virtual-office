@@ -14,6 +14,6 @@ You operate using a Repo-Based Memory Palace located in `/memory/`.
 
 - Handbook: `office/README.md` · House rules: `office/HOUSE_RULES.md`
 - Playbooks: `office/playbooks/` (intake, war-room, ship-feature, fix-ci) — run by spawning one subagent per step
-- Staff: `office/staff/` — 13 roles in 5 divisions, led by Sloane (Chief Orchestrator)
+- Staff: `office/staff/` — 14 roles in 5 divisions, led by Sloane (Chief Orchestrator)
 - Deploy: `office/scripts/deploy_target.sh` (USB hardware deploy)
 - Full agent bundle (persona + roster + protocols): `~/workspace/virtual-office/AGENTS.md`

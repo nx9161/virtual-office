@@ -3,7 +3,9 @@
 The synchronous consensus loop. Runs BEFORE any production code is
 committed for a significant feature or release. The orchestrator
 (Sloane) runs it by spawning one subagent per role per phase and
-synthesizing the outcome. Each phase's conclusion is recorded as an ADR
+synthesizing the outcome. Each role agent is briefed with the perfected
+prompt from the Prompt Writer — never the raw request. Each phase's
+conclusion is recorded as an ADR
 in the palace (`memory/wings/<wing>/`).
 
 Naming: the War Room is the office's standing process — never rename it
