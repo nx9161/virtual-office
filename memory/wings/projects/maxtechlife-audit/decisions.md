@@ -67,7 +67,12 @@ Red Team: N/A (no AI surface). Watch-notes: "Gloam" name has prior indie uses
 monetization/accounts/UGC ever arrive.
 
 ## Open items
-1. Gloam TLS cert — owner DNS/CAA checklist (§MLA-03); watcher goal owns it.
+1. Gloam TLS cert — owner DNS verified CORRECT via registrar screenshot
+   (2026-10-07 ~15:24 EDT): gloam CNAME → nx9161.github.io, apex A records
+   are GitHub's, no CAA records. Custom domain re-asserted via API + fresh
+   Pages build queued 19:24 UTC to re-kick issuance. Watcher goal
+   (gloam-subdomain-https-certificate) owns ongoing monitoring; flip Enforce
+   HTTPS the moment cert appears.
 2. Post-merge QA re-verification after CDN settles (~12 min post-merge).
 3. Real-device spot-checks (iOS share fallback, touch play) — recommended,
    needs owner's device or a device lab.
