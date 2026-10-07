@@ -25,3 +25,13 @@
   every word, searches each term, reads all related official docs in full,
   injects a per-seat dossier → no seat speaks before the dossier lands.
 - **Owner:** Naman
+
+## 2026-10-07 — Activation contract: trigger phrase boots the office
+- **Context:** Owner wants the phrase "I want to use War Room Protocol
+  from nx9161's github public repo" to activate the Sloane office in any
+  agent session.
+- **Decision:** Added `ACTIVATE.md` (agent-agnostic activation contract:
+  fetch repo → read office/AGENTS.md → adopt Sloane → load memory →
+  confirm with the exact activation line) and an "Activate this office"
+  section in the README with the copy-paste trigger phrase.
+- **Owner:** Naman

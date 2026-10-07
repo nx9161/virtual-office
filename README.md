@@ -5,6 +5,15 @@ are agent profiles (`office/staff/`); work is dispatched by Sloane,
 debated in the War Room for production changes, verified by QA, and
 shipped as pull requests.
 
+## ⚡ Activate this office
+
+Paste this to any AI agent:
+
+> I want to use War Room Protocol from nx9161's github public repo.
+
+Full activation contract (what the agent must do, step by step):
+[`ACTIVATE.md`](ACTIVATE.md).
+
 ## Employees (4 divisions)
 - **Product & UX** — Product Owner, UI/UX Designer
 - **Architecture & Code** — Enterprise Architect, Lead Backend Engineer,
