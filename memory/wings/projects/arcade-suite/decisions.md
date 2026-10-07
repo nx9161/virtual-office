@@ -292,3 +292,21 @@
   night-marsh art + guttering-wind audio.
 - Repo shall be nx9161/reedlight. "marshlight" barred from all materials.
 - Suite slate updated: MARSHLIGHT -> REEDLIGHT. Gates are 3-for-3 on kills.
+
+## ADR-2026-10-07-AS-15: REEDLIGHT shipped to production (third suite title)
+- 2026-10-07: nx9161/reedlight @ 2eb4ced built from template v1.0.1,
+  deployed to https://reedlight-nx9161s-projects.vercel.app (Vercel project
+  prj_UAsLXz8J5eitj6SsEYA6BgfQfyVX, main, auto-deploy).
+- Design: firefly carries last ember bottom->top; LIGHT AS FUEL (movement
+  4/6/8 per sec, darkness idle drain, mist x3, gloom pools x2; motes +18,
+  score 10+combo*5; fuel 0 = "the dark takes the ember"); crossing banks
+  100+fuel*2, difficulty ramps x1.08 (cap 1.6). Original hazard taxonomy:
+  drifting mist banks, night-heron shadows (shadow only, never depicted;
+  telegraphed sweeps, hit = -25 fuel + combo reset), rippling current bands,
+  gloom pools. No lanes, no hop-grid, free 2D movement.
+- Verification: 20/20 headless logic; release-check all-green (6 headers
+  incl. strict CSP script-src 'self', 404s, byte-identity); forbidden greps
+  clean (no marshlight/beaconfall/moondrift, no lane-crosser vocabulary);
+  calm skips difficulty select (BEAMTIDE-proven bypass); terser 5.51.2,
+  29,128 -> 15,007 B.
+- Live-browser QA outstanding (delegated). Hub cutover deferred.
