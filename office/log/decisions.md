@@ -87,3 +87,16 @@
   no-subagent platforms: the agent writes the debate as live dialogue,
   seats answering by name. Chief staff files gained facilitator duty.
 - **Owner:** Naman
+
+## 2026-10-07 — Re-discussion ("discuss again")
+- **Context:** Owner wants a "discuss again" command that re-debates
+  everything — the original request plus all already-discussed topics.
+- **Decision:** Added re-discussion procedure to the war-room playbook:
+  Chief pulls the prior record (no re-arguing from scratch), Prompt
+  Writer restates the motion with prior conclusions as context,
+  Knowledge Wizard re-runs Phase 0 and briefs deltas ("what's new since
+  last time"), seats hold/update/concede positions live, Chief
+  synthesizes a new verdict referencing the prior ADR/decision.
+  Honesty rule: repeated invocations with no new information get a
+  recommendation, not theater.
+- **Owner:** Naman

@@ -104,6 +104,11 @@ kept alive and relayed (positions → rebuttals → concessions, max 3
 rounds, then the gavel); tabletop dialogue on platforms without
 subagents.
 
+**Re-discussion:** on "discuss again", the room re-debates everything
+(original + prior topics) with refreshed research; the new ADR
+references the prior one. Honesty rule: no new information, no
+theater — the Chief recommends instead.
+
 Every phase conclusion is recorded as an ADR (date, context, decision,
 owner) in the Memory Palace.
 

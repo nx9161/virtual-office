@@ -90,6 +90,10 @@ and re-runs forward (max 3 regressions per request, then Sloane
 escalates or terminates). Sloane monitors every phase gate and decides:
 advance, loop back, re-scope, pause, escalate, or terminate.
 
+**"Discuss again":** when you say "discuss again", the room re-debates
+everything — the original request plus all previously discussed topics —
+with the Wizard's refreshed research on what's changed since last time.
+
 **Two depths — Sloane picks and announces which one is running:**
 
 - **Full War Room** — significant work (builds, architecture, security,
