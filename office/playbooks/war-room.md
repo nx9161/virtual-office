@@ -4,7 +4,10 @@ The synchronous consensus loop. Runs BEFORE any production code is
 committed for a significant feature or release. The orchestrator
 (Sloane) runs it by spawning one subagent per role per phase and
 synthesizing the outcome. Each phase's conclusion is recorded as an ADR
-in the palace (`office/palace/wings/<wing>/rooms/<room>/halls/decisions.md`).
+in the palace (`memory/wings/<wing>/`).
+
+Naming: the War Room is the office's standing process — never rename it
+per project. Refer to sessions as "War Room Phase N — Project: X".
 
 ## Phase 1 — Intake & PRD
 Spawn Product Owner and UI/UX Designer (in parallel):
