@@ -1,0 +1,135 @@
+# Weather App CI — analyze + custom_lint, tests, contract, secret scan,
+# size gates. Runs on PRs touching apps/weather_app/ and weekly (fixture
+# freshness check, B-4).
+
+name: weather_app
+
+on:
+  pull_request:
+    paths:
+      - 'apps/weather_app/**'
+      - '.github/workflows/weather_app.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'apps/weather_app/**'
+  schedule:
+    # Weekly: regenerate contract fixtures from the live API (B-4). Opens a
+    # PR for human review — fixtures are committed only after
+    # `flutter test test/contract` passes locally on the PR.
+    - cron: '0 6 * * 1'
+
+concurrency:
+  group: weather-app-${{ github.ref }}
+  cancel-in-progress: true
+
+defaults:
+  run:
+    working-directory: apps/weather_app
+
+jobs:
+  analyze:
+    name: analyze + custom_lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version-file: apps/weather_app/.fvmrc
+          cache: true
+      - run: flutter pub get --enforce-lockfile
+      - run: flutter analyze
+      # custom_lint layer rules run as part of `flutter analyze` via
+      # analysis_options.yaml (custom_lint plugin).
+
+  test:
+    name: unit + widget tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version-file: apps/weather_app/.fvmrc
+          cache: true
+      - run: flutter pub get --enforce-lockfile
+      - run: flutter test --coverage
+      - name: coverage gate (lines >= 70%)
+        run: |
+          dart pub global activate coverage >/dev/null 2>&1 || true
+          line_pct=$(dart pub global run coverage:format_coverage --lcov --in=coverage --out=coverage/lcov.info --packages=.dart_tool/package_config.json --report-on=lib >/dev/null 2>&1; \
+            awk -F'[:,]' '/^DA:/{t++; if($3>0) c++} END{printf "%d", (t? c*100/t : 0)}' coverage/lcov.info)
+          echo "line coverage: ${line_pct}%"
+          [ "$line_pct" -ge 70 ]
+
+  contract:
+    name: contract test (recorded fixtures)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version-file: apps/weather_app/.fvmrc
+          cache: true
+      - run: flutter pub get --enforce-lockfile
+      - run: flutter test test/contract
+
+  secrets:
+    name: secret scan
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: gitleaks
+        uses: gitleaks/gitleaks-action@v2
+        with:
+          args: detect --source apps/weather_app --no-git -v
+
+  size:
+    name: release size gate
+    runs-on: ubuntu-latest
+    needs: [analyze, test]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version-file: apps/weather_app/.fvmrc
+          cache: true
+      - run: flutter pub get --enforce-lockfile
+      - name: build APK (split per ABI)
+        run: flutter build apk --release --split-per-abi
+      - name: 35 MB per-ABI gate
+        run: |
+          fail=0
+          for f in build/app/outputs/flutter-apk/*.apk; do
+            mb=$(du -m "$f" | cut -f1)
+            echo "$f: ${mb} MB"
+            [ "$mb" -le 35 ] || { echo "OVER 35 MB: $f"; fail=1; }
+          done
+          exit $fail
+
+  regen-fixtures:
+    name: weekly fixture regen (B-4)
+    if: github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version-file: apps/weather_app/.fvmrc
+          cache: true
+      - run: flutter pub get --enforce-lockfile
+      - name: regenerate fixtures from live APIs
+        run: dart tool/regen_fixtures.dart
+      - name: contract test must pass on fresh fixtures
+        run: flutter test test/contract
+      - name: open PR
+        uses: peter-evans/create-pull-request@v7
+        with:
+          title: 'chore(weather_app): regenerate contract fixtures (weekly)'
+          body: |
+            Automated weekly fixture regeneration (B-4).
+            Contract tests passed on the fresh fixtures.
+            Reviewer: confirm no structural drift before merging.
+          branch: chore/weather-app-fixture-regen
+          commit-message: 'chore(weather_app): regenerate contract fixtures'

@@ -344,6 +344,14 @@ Rules: controllers never call Dio/Hive directly — only repository interfaces. 
 
 ## 9. Error model — FM-1…FM-20 → code paths
 
+> **SUPERSEDED (QA gate, 2026-10-06):** the FM table and failure-union sketch
+> below are **stale** — they renumber the failure modes and omit modes the
+> build added. The canonical numbering is **PRD §11 (FM-1…FM-20)** and the
+> implementation is `lib/core/error/failures.dart` (sealed `AppFailure`) +
+> `lib/core/error/failure_presentation.dart` (exact PRD §11 headlines/actions,
+> unit-tested). R-14 added `AppFailure.locationTimeout` (PRD FM-10). Do not
+> use the table below as a reference; it is kept for historical context only.
+
 All failures are a Dart 3 sealed union; the compiler enforces exhaustive handling at every `switch`:
 
 ```dart

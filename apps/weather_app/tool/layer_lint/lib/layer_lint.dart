@@ -1,10 +1,15 @@
 // Weather App layer-enforcement lints (R-9).
 //
 // Three rules:
-//  * no_data_imports_in_presentation — lib/features/** and lib/core/** must
-//    never import lib/data/** or transport/storage/plugin packages. The DI
-//    composition rule (abstract providers in domain, impls via ProviderScope
-//    overrides in main.dart) makes this possible; this lint makes it stick.
+//  * no_data_imports_in_presentation — lib/features/** (and the pure core
+//    dirs: units, error, validation, utils) must never import lib/data/** or
+//    transport/storage/plugin packages — EXCEPT lib/data/di/**, the sanctioned
+//    composition seam (usecase providers; domain must stay pure Dart so the
+//    concrete providers that wire domain objects together live there).
+//    The DI composition rule (abstract providers in domain, impls via
+//    ProviderScope overrides in main.dart) makes this possible; this lint
+//    makes it stick. core/network, core/config, core/logging, core/telemetry
+//    are infrastructure and are intentionally exempt.
 //  * domain_stays_pure — lib/domain/** may import only Dart core / intl and
 //    sibling domain files. No flutter, no data, no features.
 //  * no_json_casts — `as` casts are banned under lib/data/**. All network
@@ -27,33 +32,37 @@ class _LayerLintPlugin extends PluginBase {
       ];
 }
 
-bool _isPresentationFile(String path) =>
-    path.contains('/lib/features/') || path.contains('/lib/core/');
-
-bool _isMainOrApp(String path) =>
-    path.endsWith('/lib/main.dart') || path.endsWith('/lib/app.dart');
+/// Files that must not reach into the data layer or plugin SDKs.
+bool _isPresentationFile(String path) {
+  final String p = path.replaceAll(r'\', '/');
+  if (p.contains('/lib/features/')) return true;
+  return p.contains('/lib/core/units/') ||
+      p.contains('/lib/core/error/') ||
+      p.contains('/lib/core/validation/') ||
+      p.contains('/lib/core/utils/');
+}
 
 class _NoDataImportsInPresentation extends DartLintRule {
   _NoDataImportsInPresentation()
       : super(
           code: const LintCode(
             'no_data_imports_in_presentation',
-            'Presentation (and core/) must not import the data layer or '
-            'transport/storage plugins. Depend on domain interfaces instead; '
-            'implementations are bound via ProviderScope overrides in main.dart (R-9).',
+            'Presentation must not import the data layer or transport/storage '
+            'plugins. Depend on domain interfaces instead; implementations are '
+            'bound via ProviderScope overrides in main.dart (R-9).',
           ),
         );
 
-  static const List<String> _deniedPrefixes = <String>[
-    'package:weather_app/data/',
-    'package:dio/',
+  static const List<String> _deniedPackages = <String>[
     'package:dio',
     'package:hive_ce',
+    'package:hive_ce_flutter',
     'package:geolocator',
     'package:geocoding',
     'package:connectivity_plus',
     'package:sentry_flutter',
     'package:shared_preferences',
+    'package:path_provider',
   ];
 
   @override
@@ -62,13 +71,17 @@ class _NoDataImportsInPresentation extends DartLintRule {
     ErrorReporter reporter,
     CustomLintContext context,
   ) {
-    final String path = resolver.source.fullName.replaceAll(r'\', '/');
-    if (!_isPresentationFile(path) || _isMainOrApp(path)) return;
+    if (!_isPresentationFile(resolver.source.fullName)) return;
     context.registry.addImportDirective((ImportDirective node) {
       final String? uri = node.uri.stringValue;
       if (uri == null) return;
-      final bool denied = uri.contains('/lib/data/') ||
-          _deniedPrefixes.any((String p) => uri == p || uri.startsWith(p));
+      final bool isDiSeam = uri.contains('/lib/data/di/') ||
+          uri.startsWith('package:weather_app/data/di/');
+      final bool denied = !isDiSeam &&
+          (uri.contains('/lib/data/') ||
+              uri.startsWith('package:weather_app/data/') ||
+              _deniedPackages.any(
+                  (String p) => uri == p || uri.startsWith('$p/')));
       if (denied) reporter.reportErrorForNode(code, node);
     });
   }
