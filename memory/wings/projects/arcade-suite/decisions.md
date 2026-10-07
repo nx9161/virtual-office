@@ -348,3 +348,22 @@
   clean (no seedstorm/hailseed/hyperspace/shields); terser 5.51.2,
   27,607 -> 14,933 B. Calm skips difficulty select (proven bypass).
 - Live-browser QA outstanding (delegated). All four flagships now shipped.
+
+## ADR-2026-10-07-AS-18: SEEDRIFT browser QA finds dead combo mechanic (repair dispatched)
+- 2026-10-07: live Chromium play-through 8/10 with 1 partial, 1 FAIL.
+  FAIL: storm cells spawn at y=-140..-190 (off-screen, never move) —
+  telegraph invisible, threading geometrically impossible (inBand needs
+  seed.y<30, seed clamped y>=35). Combo mechanic dead; title-screen hook
+  "thread the hail" non-functional. Partial: pointer drag implemented but
+  not visually confirmed. Minor: seed pins to ceiling while miles accrue.
+- Everything else PASS: title/mode/difficulty flow, Calm direct-start,
+  continuous motion, 3-strike game over + taunt + copy button, pause/mute,
+  Calm endless 226s+.
+- Repair dispatched on nx9161/seedrift: cells spawn visible with in-playfield
+  telegraphs, threading geometrically achievable, drag verified, headless
+  proof required (telegraph visible + combo increments + drag moves seed).
+  Ceiling-pinning addressed only if cheap.
+- Lesson: headless QA (17/17) passed with cells off-screen because the
+  harness asserted spawn counts, not visibility/geometry reachability.
+  Future title QA must assert mechanics are REACHABLE in the playfield,
+  not merely present in code.
