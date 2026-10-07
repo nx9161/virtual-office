@@ -367,3 +367,16 @@
   harness asserted spawn counts, not visibility/geometry reachability.
   Future title QA must assert mechanics are REACHABLE in the playfield,
   not merely present in code.
+
+## ADR-2026-10-07-AS-19: REEDLIGHT browser QA 11/12 (heron telegraph too faint)
+- 2026-10-07: live Chromium play-through — 11 PASS, 1 PARTIAL. Light-as-fuel
+  economy verified (move-drain > idle-drain per difficulty; motes +18 fuel,
+  score/combo bump); crossing bonus + reed-bed flash; run-over overlay +
+  copy-taunt; pause/mute; Calm direct-start with ∞ ember bar.
+- PARTIAL: night-heron telegraph renders at alpha 0.1-0.18 — never perceived
+  across ~8 min of watching on all difficulties. Mechanic works (14/10/7s
+  spawns, 1.2s telegraph, -25 fuel + shake) but the warning is invisible.
+  Fix dispatched: raise telegraph alpha to 0.45-0.6 + slow pulse; timing
+  and damage unchanged (visibility fix, not rebalance).
+- Note: Wildfire idle drain ~1.8/s (~55s to empty standing still) is
+  intentionally punishing; accepted as design.
