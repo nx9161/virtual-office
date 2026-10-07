@@ -1,8 +1,9 @@
 // SearchSheet widget tests: idle/recents, loading, results, empty,
 // error (FM-4 lens), offline (field disabled, recents tappable).
 
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' hide SearchController;
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_riverpod/misc.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:weather_app/core/error/failures.dart';
 import 'package:weather_app/domain/entities/geo_place.dart';

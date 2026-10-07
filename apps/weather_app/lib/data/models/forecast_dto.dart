@@ -243,7 +243,7 @@ abstract final class ForecastDto {
     if (isDayRaw != null) {
       final int? v = asInt(isDayRaw);
       if (v == 0 || v == 1) {
-        isDay = v;
+        isDay = v!;
       } else {
         AppLogger.validationFailure(
             field: 'current.is_day',
@@ -260,7 +260,7 @@ abstract final class ForecastDto {
       humidityPct: _ranged(c, 'current.relative_humidity_2m', 0, 100),
       precipitationMm: _nonNegative(c, 'current.precipitation'),
       cloudCoverPct: _ranged(c, 'current.cloud_cover', 0, 100),
-      pressureMsl: _ranged(c, 'current.pressure_msl', 800, 1100),
+      pressureHpa: _ranged(c, 'current.pressure_msl', 800, 1100),
       windSpeedKmh: _nonNegative(c, 'current.wind_speed_10m'),
       windDirectionDeg: _ranged(c, 'current.wind_direction_10m', 0, 360),
       windGustsKmh: _nonNegative(c, 'current.wind_gusts_10m'),

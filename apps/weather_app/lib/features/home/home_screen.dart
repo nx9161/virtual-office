@@ -10,6 +10,7 @@ import 'dart:ui' show Locale;
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_riverpod/misc.dart';
 import 'package:weather_app/core/config/app_providers.dart';
 import 'package:weather_app/core/error/failure_presentation.dart';
 import 'package:weather_app/core/error/failures.dart';
@@ -27,6 +28,7 @@ import 'package:weather_app/features/common/widgets/responsive_scaffold.dart';
 import 'package:weather_app/features/common/widgets/skeleton.dart';
 import 'package:weather_app/features/home/home_controller.dart';
 import 'package:weather_app/features/home/home_state.dart';
+import 'package:weather_app/features/home/widgets/metrics_grid.dart';
 import 'package:weather_app/features/home/widgets/daily_preview.dart';
 import 'package:weather_app/features/home/widgets/hero_card.dart';
 import 'package:weather_app/features/home/widgets/hourly_preview.dart';
@@ -183,7 +185,7 @@ class _ReadyHome extends ConsumerWidget {
           else if (bannerFailure != null)
             ErrorBanner(
               failure: bannerFailure!,
-              presentation: FailurePresentationMapper.map(bannerFailure),
+              presentation: FailurePresentationMapper.map(bannerFailure!),
               onAction: (FailureAction a) =>
                   _onBannerAction(context, ref, a),
               onDismiss: () =>
@@ -241,7 +243,7 @@ class _ReadyHome extends ConsumerWidget {
 
   Future<void> _onRefresh(BuildContext context, WidgetRef ref) async {
     final AppLocalizations strings = AppLocalizations.of(context);
-    final bool online = ref.read(isOnlineProvider).valueOrNull ?? true;
+    final bool online = ref.read(isOnlineProvider).value ?? true;
     if (!online) {
       // Design §3.1: refresh disabled offline, with explanation on tap.
       if (context.mounted) {

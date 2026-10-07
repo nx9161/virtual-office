@@ -5,6 +5,7 @@
 import 'package:fake_async/fake_async.dart';
 import 'package:flutter/widgets.dart' show Locale;
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_riverpod/misc.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:weather_app/core/config/app_providers.dart';
@@ -121,9 +122,6 @@ class _FakeWeatherRepository implements WeatherRepository {
 
   @override
   void cancelDeviceRequests() {}
-
-  @override
-  Future<void> clearCache() async {}
 }
 
 class _MockLocationRepository extends Mock implements LocationRepository {}

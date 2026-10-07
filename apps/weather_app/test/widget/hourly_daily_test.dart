@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_riverpod/misc.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:weather_app/features/daily/daily_screen.dart';
 import 'package:weather_app/features/home/home_controller.dart';
@@ -55,7 +56,6 @@ void main() {
     expect(find.text('Tue'), findsOneWidget);
     expect(find.text('22°'), findsOneWidget);
   });
-}
 
   testWidgets('B1/FM-17: partial hourly slice shows the note, never padding',
       (WidgetTester tester) async {
@@ -80,6 +80,7 @@ void main() {
     expect(find.text('6:51 PM'), findsOneWidget);
     expect(find.text('UV max'), findsOneWidget);
   });
+}
 
 ForecastView _view() => testView();
 

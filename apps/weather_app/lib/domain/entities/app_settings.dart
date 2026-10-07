@@ -2,8 +2,10 @@
 //
 // ConsentState: unknown | granted | declined | revoked — persisted in
 // SharedPreferences; drives the pre-OS-prompt sheet (GDPR Art. 6(1)(a)).
-// ConsentFlowStep: idle | sheetShown | osPromptPending — persisted so the
+// ConsentFlowStep: idle | sheetShown | osPromptPending | done — persisted so the
 // flow survives app backgrounding at the OS dialog (HIGH-1.4).
+// `done` marks the device flow as completed; persisted by name, so old
+// values still deserialize after this addition.
 //
 // Re-prompt policy (Tech Law C4 — two legally distinct events):
 //  * in-app decline -> 30-day suppression (persisted consentDeclinedAt);
@@ -13,7 +15,7 @@ import 'package:weather_app/core/units/unit_system.dart';
 
 enum ConsentState { unknown, granted, declined, revoked, osDenied }
 
-enum ConsentFlowStep { idle, sheetShown, osPromptPending }
+enum ConsentFlowStep { idle, sheetShown, osPromptPending, done }
 
 /// Domain-owned theme mode (NOT flutter's ThemeMode — domain stays pure).
 enum AppThemeMode { system, light, dark }

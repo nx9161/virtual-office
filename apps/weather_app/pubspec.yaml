@@ -14,7 +14,7 @@ dependencies:
     sdk: flutter
   # State management + DI — the single mechanism (ARCHITECTURE.md ADR-02).
   # Providers are hand-written with the plain Riverpod 3 API (plain Notifier
-  # per ADR-14/R-8); riverpod_generator stays a dev dependency for future use.
+  # per ADR-14/R-8); riverpod_generator was removed — unused, no generated files.
   flutter_riverpod: ^3.4.3
   # HTTP: interceptor chain (rate-limit / retry / sanitized logging / body-size
   # gate) per ADR-11.
@@ -46,9 +46,6 @@ dev_dependencies:
     sdk: flutter
   flutter_lints: ^5.0.0
   custom_lint: ^0.7.0
-  riverpod_lint: ^3.0.0
-  riverpod_generator: ^3.0.0
-  build_runner: ^2.15.0
   mocktail: ^1.0.0
   # Deterministic timer control in controller tests (debounce / 429 retry).
   fake_async: ^1.3.1

@@ -41,7 +41,7 @@ abstract final class BigDataCloudDto {
             'bigdatacloud.countryCode', 'invalid');
       }
     }
-    final String? country =
+    final String country =
         asCleanStringOrOmit(root['countryName'], maxLength: 100) ?? '—';
     return GeoPlace(
       name: name,

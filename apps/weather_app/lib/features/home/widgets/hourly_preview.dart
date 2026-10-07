@@ -103,7 +103,7 @@ class _HourCell extends StatelessWidget {
           decoration: BoxDecoration(
             color: DesignTokens.surfaceSecondary(context),
             borderRadius: BorderRadius.circular(DesignTokens.cardRadius),
-            border: BorderSide(color: DesignTokens.surfaceTertiary(context)),
+            border: Border.all(color: DesignTokens.surfaceTertiary(context)),
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,

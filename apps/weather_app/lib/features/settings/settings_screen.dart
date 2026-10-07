@@ -107,7 +107,7 @@ class SettingsScreen extends ConsumerWidget {
               context,
               label: strings.temperature,
               options: <String>[strings.celsius, strings.fahrenheit],
-              selected: state.unitSystem.temperature == TempUnit.celsius ? 0 : 1,
+              selected: state.unitSystem.temp == TempUnit.celsius ? 0 : 1,
               onSelected: (int i) => controller.setTempUnit(
                   i == 0 ? TempUnit.celsius : TempUnit.fahrenheit),
             ),

@@ -9,6 +9,7 @@
 // that wire domain objects together belong to the composition layer.
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_riverpod/misc.dart';
 import 'package:weather_app/core/network/connectivity_provider.dart';
 import 'package:weather_app/core/utils/clock.dart';
 import 'package:weather_app/data/datasources/device/location_datasource.dart';
@@ -39,7 +40,7 @@ WeatherRepository buildWeatherRepository(Ref ref) => WeatherRepositoryImpl(
       clock: ref.watch(clockProvider),
       // C-10.7 offline fast-path: when the connectivity signal is unknown,
       // assume online (the network attempt fails fast and falls back).
-      isOnline: () => ref.read(isOnlineProvider).valueOrNull ?? true,
+      isOnline: () => ref.read(isOnlineProvider).value ?? true,
     );
 
 PlaceRepository buildPlaceRepository(Ref ref) => PlaceRepositoryImpl(

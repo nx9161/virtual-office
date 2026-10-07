@@ -13,9 +13,9 @@
 //  * Opt-out: Sentry.close() AND deletion of the on-disk envelope cache
 //    (B-7 / LOW-3), so already-queued envelopes can never be sent later.
 //
-// NOTE (unverified without the Flutter SDK): the exact sentry_flutter v8
-// option/method names used here (cacheDirPath, Sentry.close, beforeSend
-// signature) must be confirmed by `flutter analyze` in CI.
+// NOTE (verified against sentry_flutter 8.14.2): there is no cacheDirPath
+// option — the deterministic envelope-cache dir is only used by
+// purgeEnvelopeCache(). Sentry.close and beforeSend exist as used below.
 
 import 'dart:async';
 import 'dart:io';
@@ -114,7 +114,7 @@ abstract final class SentryService {
       final Directory supportDir = await getApplicationSupportDirectory();
       // Deterministic envelope-cache location so opt-out can purge it (B-7).
       _envelopeCacheDir = '${supportDir.path}/sentry-envelopes';
-      await SentryFlutter.init((Options options) {
+      await SentryFlutter.init((SentryFlutterOptions options) {
         options.dsn = sentryDsn;
         options.release = 'weather_app@$appVersion';
         // Crash-only posture (R-17 / ADR-10).
@@ -122,7 +122,8 @@ abstract final class SentryService {
         options.profilesSampleRate = 0;
         options.sendDefaultPii = false;
         options.enableAutoSessionTracking = false;
-        options.cacheDirPath = _envelopeCacheDir;
+        // sentry 8.x has no cacheDirPath option; the deterministic dir
+        // above is still used by purgeEnvelopeCache() for the B-7 purge.
         options.beforeSend = _beforeSend;
       });
       _initialized = true;

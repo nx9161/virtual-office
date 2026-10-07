@@ -16,6 +16,7 @@ import 'dart:async';
 import 'dart:ui' show Locale;
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_riverpod/misc.dart';
 import 'package:weather_app/core/config/app_providers.dart';
 import 'package:weather_app/core/config/constants.dart';
 import 'package:weather_app/core/error/error_mapper.dart';
@@ -62,8 +63,8 @@ class HomeController extends Notifier<HomeScreenState> {
     // The listen subscription is closed automatically on dispose.
     ref.listen<AsyncValue<bool>>(isOnlineProvider,
         (AsyncValue<bool>? prev, AsyncValue<bool> next) {
-      final bool? was = prev?.valueOrNull;
-      final bool? isNow = next.valueOrNull;
+      final bool? was = prev?.value;
+      final bool? isNow = next.value;
       if (was == false && isNow == true) _onReconnect();
     });
     // Unit toggle: rebuild the display view from the cached entity —
@@ -282,7 +283,7 @@ class HomeController extends Notifier<HomeScreenState> {
   /// Pull-to-refresh. The widget checks connectivity first and shows the
   /// explanatory snackbar when offline (design §3.1); this double-checks.
   Future<void> refresh() async {
-    final bool online = ref.read(isOnlineProvider).valueOrNull ?? true;
+    final bool online = ref.read(isOnlineProvider).value ?? true;
     if (!online) return;
     await _load(forceRefresh: true);
   }

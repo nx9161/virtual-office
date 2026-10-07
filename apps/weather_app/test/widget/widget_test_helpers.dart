@@ -2,6 +2,7 @@
 
 import 'package:flutter/widgets.dart' show Locale;
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_riverpod/misc.dart';
 import 'package:weather_app/core/config/app_providers.dart';
 import 'package:weather_app/core/error/failures.dart';
 import 'package:weather_app/core/network/connectivity_provider.dart';

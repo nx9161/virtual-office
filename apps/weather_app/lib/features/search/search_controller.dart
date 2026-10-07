@@ -11,6 +11,7 @@
 import 'dart:async';
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_riverpod/misc.dart';
 import 'package:weather_app/core/config/constants.dart';
 import 'package:weather_app/core/error/error_mapper.dart';
 import 'package:weather_app/core/network/connectivity_provider.dart';
@@ -51,7 +52,7 @@ class SearchController extends Notifier<SearchScreenState> {
       if (!_disposed) state = SearchIdle(_recents());
       return;
     }
-    final bool online = ref.read(isOnlineProvider).valueOrNull ?? true;
+    final bool online = ref.read(isOnlineProvider).value ?? true;
     if (!online) {
       if (!_disposed) state = SearchOffline(_recents());
       return;

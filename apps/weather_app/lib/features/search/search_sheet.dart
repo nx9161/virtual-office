@@ -9,6 +9,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_riverpod/misc.dart';
 import 'package:weather_app/core/config/constants.dart';
 import 'package:weather_app/core/error/failure_presentation.dart';
 import 'package:weather_app/core/error/failures.dart';
@@ -49,7 +50,7 @@ class _SearchSheetState extends ConsumerState<SearchSheet> {
     final AppLocalizations strings = AppLocalizations.of(context);
     final SearchScreenState state = ref.watch(searchControllerProvider);
     final bool online =
-        ref.watch(isOnlineProvider).valueOrNull ?? true;
+        ref.watch(isOnlineProvider).value ?? true;
 
     return SafeArea(
       child: Padding(
@@ -168,8 +169,7 @@ class _SearchSheetState extends ConsumerState<SearchSheet> {
           children: <Widget>[
             ErrorBanner(
               failure: failure,
-              presentation: FailurePresentationMapper.forSearch(
-                  FailurePresentationMapper.map(failure)),
+              presentation: FailurePresentationMapper.forSearch(failure),
               onAction: (FailureAction a) {
                 if (a == FailureAction.dismiss) {
                   ref.read(searchControllerProvider.notifier).dismissError();

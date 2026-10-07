@@ -76,7 +76,7 @@ abstract final class GeocodingDto {
           valueType: _type(e['longitude']));
       return null;
     }
-    final String? country =
+    final String country =
         asCleanString(e['country'], minLength: 1, maxLength: 100) ?? '—';
     final String? admin1 = asCleanStringOrOmit(e['admin1'], maxLength: 100);
     final Object? codeRaw = e['country_code'];

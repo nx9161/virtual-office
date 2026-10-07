@@ -9,6 +9,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:weather_app/core/telemetry/sentry_service.dart';
+import 'package:weather_app/domain/entities/geo_place.dart';
 import 'package:weather_app/domain/repositories/location_repository.dart';
 import 'package:weather_app/domain/repositories/settings_repository.dart';
 import 'package:weather_app/features/common/design_tokens.dart';
@@ -43,7 +44,7 @@ class _WelcomeScreenState extends ConsumerState<WelcomeScreen> {
   }
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  Widget build(BuildContext context) {
     final AppLocalizations strings = AppLocalizations.of(context);
     final ConsentController consent =
         ref.read(consentControllerProvider.notifier);
@@ -79,10 +80,10 @@ class _WelcomeScreenState extends ConsumerState<WelcomeScreen> {
 
     // Design §5.2: confirm replacement of a saved city with the device city,
     // with Undo (persists until dismissed — the Undo action is the point).
-    ref.listen(
+    ref.listen<GeoPlace?>(
       consentControllerProvider
           .select((ConsentControllerState s) => s.justReplacedPlace),
-      (Object? prev, Object? next) {
+      (GeoPlace? prev, GeoPlace? next) {
         if (prev == null && next != null) {
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(

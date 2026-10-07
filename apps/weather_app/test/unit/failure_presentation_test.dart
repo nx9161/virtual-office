@@ -22,7 +22,7 @@ void main() {
 
   test('server error interpolates the stale label (FM-2)', () {
     final FailurePresentation p = FailurePresentationMapper.map(
-        const ServerErrorFailure(),
+        const ServerErrorFailure(500),
         staleLabel: '2h');
     expect(p.headline, 'Weather service is down');
     expect(p.body, contains('2h'));
@@ -57,19 +57,18 @@ void main() {
   test('FM-4 search lens: transport failures all become the search card', () {
     for (final AppFailure f in <AppFailure>[
       const NetworkUnreachableFailure(),
-      const ServerErrorFailure(),
+      const ServerErrorFailure(500),
       const SchemaViolationFailure('x', 'y'),
       const TimeoutFailure(),
     ]) {
-      final FailurePresentation p =
-          FailurePresentationMapper.forSearch(FailurePresentationMapper.map(f));
+      final FailurePresentation p = FailurePresentationMapper.forSearch(f);
       expect(p.headline, 'Search isn\'t working right now', reason: '$f');
     }
   });
 
   test('FM-4 search lens keeps no-results distinct', () {
     final FailurePresentation p = FailurePresentationMapper.forSearch(
-        FailurePresentationMapper.map(const NoResultsFailure('zzz')));
+        const NoResultsFailure('zzz'));
     expect(p.headline, contains('No places found'));
   });
 

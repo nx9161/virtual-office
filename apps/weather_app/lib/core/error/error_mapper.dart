@@ -61,12 +61,13 @@ AppFailure _mapDioException(DioException e) {
     case DioExceptionType.connectionTimeout:
     case DioExceptionType.sendTimeout:
     case DioExceptionType.receiveTimeout:
+    case DioExceptionType.transformTimeout:
       return const AppFailure.timeout();
     case DioExceptionType.connectionError:
     case DioExceptionType.badCertificate:
       return const AppFailure.networkUnreachable();
     case DioExceptionType.cancel:
-      rethrow; // not a failure — caller handles supersede/drop
+      throw e; // not a failure — caller handles supersede/drop
     case DioExceptionType.badResponse:
       return const AppFailure.schemaViolation('<body>', 'bad-response');
     case DioExceptionType.unknown:

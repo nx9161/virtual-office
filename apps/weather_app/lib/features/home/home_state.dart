@@ -256,25 +256,26 @@ abstract final class ForecastViewMapper {
       ],
       hourlyPartial:
           upcomingHours.length < AppConstants.hourlyEntryCount,
-      daily: <DailyViewPoint>[
-        for (final DailySummary d in forecast.daily)
-          DailyViewPoint(
-            weekday: formatter.dayLabels(d.date).weekday,
-            date: formatter.dayLabels(d.date).date,
-            weatherCode: d.weatherCode,
-            tempMax: formatter.formatTemp(d.tempMaxC),
-            tempMin: formatter.formatTemp(d.tempMinC),
-            precipProbability: formatter.formatPercent(
-              d.precipitationProbabilityMaxPct,
-              'precipitation probability',
-            ),
-            sunriseLabel:
-                d.sunrise == null ? '—' : formatter.hourLabel(_isoLocal(d.sunrise)),
-            sunsetLabel:
-                d.sunset == null ? '—' : formatter.hourLabel(_isoLocal(d.sunset)),
-            uvIndexMax: formatter.formatUvIndex(d.uvIndexMax),
+      daily: forecast.daily.map((DailySummary d) {
+        final DateTime? sunrise = d.sunrise;
+        final DateTime? sunset = d.sunset;
+        return DailyViewPoint(
+          weekday: formatter.dayLabels(d.date).weekday,
+          date: formatter.dayLabels(d.date).date,
+          weatherCode: d.weatherCode,
+          tempMax: formatter.formatTemp(d.tempMaxC),
+          tempMin: formatter.formatTemp(d.tempMinC),
+          precipProbability: formatter.formatPercent(
+            d.precipitationProbabilityMaxPct,
+            'precipitation probability',
           ),
-      ],
+          sunriseLabel:
+              sunrise == null ? '—' : formatter.hourLabel(_isoLocal(sunrise)),
+          sunsetLabel:
+              sunset == null ? '—' : formatter.hourLabel(_isoLocal(sunset)),
+          uvIndexMax: formatter.formatUvIndex(d.uvIndexMax),
+        );
+      }).toList(),
     );
   }
 

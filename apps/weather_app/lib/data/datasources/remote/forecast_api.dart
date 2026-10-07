@@ -59,7 +59,7 @@ class ForecastApi {
         json: json,
         place: place,
         fetchedAtUtc: fetchedAtUtc,
-        onDrift: onDrift ?? SentryService.breadcrumbSchemaDrift,
+        onDrift: onDrift ?? (String f) => SentryService.breadcrumbSchemaDrift(f, 'parse'),
       );
     } on DioException catch (e) {
       // Supersede/cancel is not a failure (FM-12) — propagate for the caller.

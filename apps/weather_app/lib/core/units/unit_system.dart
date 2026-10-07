@@ -63,6 +63,9 @@ class UnitSystem {
   UnitSystem withWind(WindUnit wind) =>
       UnitSystem(temp: temp, wind: wind, pressure: pressure);
 
+  UnitSystem withPressure(PressureUnit pressure) =>
+      UnitSystem(temp: temp, wind: wind, pressure: pressure);
+
   /// 'celsius|kmh|hpa' — compact prefs serialization.
   String serialize() => '${temp.name}|${wind.name}|${pressure.name}';
 

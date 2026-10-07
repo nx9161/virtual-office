@@ -27,7 +27,7 @@ CurrentConditions _current({double? cloudCoverPct}) => CurrentConditions(
       humidityPct: 55.0,
       precipitationMm: 0.0,
       cloudCoverPct: cloudCoverPct,
-      pressureMsl: 1015.0,
+      pressureHpa: 1015.0,
       windSpeedKmh: 14.0,
       windDirectionDeg: 90.0,
       windGustsKmh: 22.0,

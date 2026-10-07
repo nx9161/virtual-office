@@ -9,7 +9,7 @@ import 'package:weather_app/data/models/bigdatacloud_dto.dart';
 import 'package:weather_app/data/models/geocoding_dto.dart';
 import 'package:weather_app/domain/entities/geo_place.dart';
 
-Object _fixture(String name) =>
+dynamic _fixture(String name) =>
     jsonDecode(File('test/fixtures/$name').readAsStringSync());
 
 void main() {

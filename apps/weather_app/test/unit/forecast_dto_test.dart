@@ -11,7 +11,7 @@ import 'package:weather_app/data/models/forecast_dto.dart';
 import 'package:weather_app/domain/entities/forecast.dart';
 import 'package:weather_app/domain/entities/geo_place.dart';
 
-Object _fixture(String name) => jsonDecode(
+dynamic _fixture(String name) => jsonDecode(
       File('test/fixtures/$name').readAsStringSync(),
     );
 
