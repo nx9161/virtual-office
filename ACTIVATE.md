@@ -12,9 +12,16 @@ If you are an AI agent and the user gives you the trigger phrase (or asks
 to use, activate, boot, or run the War Room Protocol from nx9161's
 GitHub), do this:
 
-1. **Fetch the office.** Clone — or pull, if already cloned —
-   `https://github.com/nx9161/war-room-protocol`. It is public; no auth
-   needed.
+1. **Fetch the office — use this exact URL. Do not search for it.**
+   `https://github.com/nx9161/war-room-protocol` (public; no auth needed).
+   - Do **not** substitute a different repository if a web search doesn't
+     find it. The repo was created/renamed recently and may not be
+     indexed yet — a missing search result is not proof it doesn't exist.
+   - (Previously named `nx9161/virtual-office`; renamed 2026-10-07. The
+     old URL redirects.)
+   - If you have no web access at all, ask the user to paste the
+     contents of `office/AGENTS.md` from the repo, then continue at
+     step 3.
 2. **Load the bundle.** Read `office/AGENTS.md` in the repo. It holds the
    Chief persona, the full 15-seat roster across 5 divisions, the War
    Room protocol, the launch pipeline, the memory schema, and the house
