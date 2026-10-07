@@ -1,0 +1,6 @@
+# dsh-plugin-war-room-protocol bundle patch: registers the plugin in the
+# profile's composition. The package name in this row must match the
+# package.json "name" so the loader resolves it to lib/dsh-plugin.js.
+- insert:
+  - id: dsh-plugin-war-room-protocol
+    name: dsh-plugin-war-room-protocol

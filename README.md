@@ -29,6 +29,32 @@ loop** (full war room for big work, quick huddle for small stuff).
 Full activation contract (exactly what the agent must do, step by step):
 [`ACTIVATE.md`](ACTIVATE.md).
 
+## 🔌 Install as a DeepSeek Harness plugin
+
+Rather paste nothing at all? Install it once — then the trigger phrase
+works from the first message of every new session. In the Harness
+plugin screen, enter the GitHub address:
+
+```
+nx9161/war-room-protocol
+```
+
+or via CLI:
+
+```bash
+dsh plugin --profile web add github:nx9161/war-room-protocol
+# local clone also works:
+dsh plugin --profile web add /path/to/war-room-protocol
+```
+
+Then open a **new** session. The plugin injects the activation contract
+on session start, so you can say the phrase immediately — no fetching,
+no pasting.
+
+The npm package name `dsh-plugin-war-room-protocol` is reserved for a
+future publish; the GitHub address installs today. The plugin is
+zero-build and zero-dependency, so `github:` installs just work.
+
 ## What this is
 
 A complete software team as agent profiles. Product, architecture,
