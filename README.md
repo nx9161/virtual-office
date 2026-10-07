@@ -14,6 +14,14 @@ Paste this to any AI agent:
 
 > I want to use War Room Protocol from nx9161's github public repo.
 
+For maximum reliability (some AIs can't browse or search fresh repos),
+paste this full block instead:
+
+> I want to use War Room Protocol from nx9161's github public repo.
+> Fetch this exact URL — do not web-search for it:
+> https://github.com/nx9161/war-room-protocol
+> If you cannot fetch it, ask me to paste office/AGENTS.md and I will.
+
 The office stays active until you say **"End War Room Protocol"**.
 
 Full activation contract (exactly what the agent must do, step by step):

@@ -50,6 +50,22 @@ GitHub), do this:
   production deploy without explicit owner approval, and any blocking
   seat's block stands until cleared.
 
+## Prompt echo — how you know it identified you correctly
+
+After activation, whenever you give the office a task, the agent must
+echo it back before acting:
+
+1. The Prompt Writer perfects your raw prompt.
+2. The agent shows you the perfected version: *"Here's what I'm taking
+   on: …"*
+3. Work starts. Keep talking or say "go" — silence after the echo is
+   approval. (Money, production deploys, and external commitments still
+   need your explicit approval per house rules.)
+
+If the echo doesn't match what you meant, correct it — the office
+re-perfects and re-echoes. This is the handshake that proves the AI
+identified your prompt under the protocol instead of guessing.
+
 ## Staying active & ending the session
 
 - **The office stays active** for the whole conversation once triggered.
