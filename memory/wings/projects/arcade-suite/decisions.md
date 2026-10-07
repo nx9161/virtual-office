@@ -225,3 +225,15 @@
 - Outstanding: real-browser play-through (delegated). Hub card cutover
   deferred per owner decision. Standing caveat: confirm real-internet
   reachability from owner's browser.
+
+## ADR-2026-10-07-AS-11: BEAMTIDE real-browser QA passes 9/9
+- 2026-10-07: live Chromium play-through of production — all 9 checklist
+  items PASS (load/title, start via click + Space/Enter, mode + difficulty
+  flow, keyboard + mouse steering, auto-beam redemption with gold climb-offs,
+  lamp-pip game-over with taunt + copy button, P/Esc pause + M mute, Calm
+  endless 60s+, clean game feel).
+- Two notes: (a) difficulty is intentionally brutal for idle players
+  (Wildfire ~12s, Lantern ~15-20s) — matches "punishing margins" copy,
+  accepted as design; (b) Calm mode routes through difficulty select whose
+  copy implies danger in a threat-free mode — queued as a polish fix (skip
+  difficulty select in Calm).
