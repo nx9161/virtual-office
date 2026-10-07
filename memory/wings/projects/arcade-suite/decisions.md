@@ -69,3 +69,44 @@
   done-definition mirrors the GLOAM QA bar.
 - Next: Prompt Writer perfects the template-bootstrap prompt; then
   BEACONFALL's Phase 3 IP gate.
+
+## ADR-2026-10-07-AS-04: Phase 3 SIGNED — IP-clean framework (blocking gate passed)
+- Full framework: memory/wings/projects/arcade-suite/ip-clean-framework.md
+- Seats: AppSec Lead, Global Tech Law Lead, General Counsel — all
+  CONDITIONAL SIGN-OFF, zero blocks raised, zero regression rounds used.
+- Clean-design rules (§1): 13 numbered imperatives — may borrow loops/rules/
+  genres/scènes à faire (with Data East limiting principle: borrow loops not
+  lineups) vs. must originate titles/art/music/story/layouts/UI copy/total
+  concept & feel; Tetris "could you have expressed it differently?" test as
+  working standard; "if it needs a lawyer to argue, redesign"; mandatory
+  clean-room discipline; never market as a clone of a named work.
+- Per-title clearance gate (§2): trademark screen + original-expression
+  inventory + trade-dress/UI-identity line item (GC-required) + never-do
+  verification; BOTH Tech Law and GC signatures required — a title does not
+  enter build until both sign. Standing block triggers: non-flagship titles
+  blocked by default until cleared; build drift triggers re-review.
+- Trademark process (§3): owner does not self-clear; TESS + app stores + web
+  + phonetic/visual/meaning variants; store-search confusion test kills a
+  name; rename-in-room, re-screen same day.
+- MOONDRIFT (§4): flood-maze/no-fixed-layout/no-dot-grid sufficient ONLY
+  with 5 extra guardrails (non-4 pursuer count w/ lanternfish-derived AI,
+  no dot-clear goal, biology-based character distance, no signature layouts
+  + load-bearing flood, original soundscape) + documented Atari-v-Philips
+  differentiation analysis before build completes.
+- AppSec annex (§6): strict CSP (zero inline scripts/styles/handlers in
+  template — diverges from GLOAM precedent, flagged for template phase),
+  reproducible builds, 404 probes, preview-gating verification, cache
+  headers, per-project-per-title, shared.js version-stamp + fleet drift
+  control, CI secret scanning, Ko-fi single-constant + rel=noopener,
+  client-side hygiene bans, fleet runbook. HARD PRE-DEPLOY CONDITION:
+  Vercel AI-training opt-out flipped + verified before first production
+  deploy of any title (still not flipped by owner).
+- GC residual risk (§7): JP/EU posture unresearched (geofence or brief
+  before targeting), total-concept-and-feel fuzziness, trade dress,
+  deterrents-are-not-shields. Honest promise: meritless claims, not a
+  no-filing guarantee.
+- NON-WAIVABLE monetized-launch gate (§8): licensed counsel reviews before
+  ANY monetized step (Ko-fi links going live counts). Building permit vs
+  occupancy certificate — framework signs blueprints, counsel clears opening.
+- Next: BEACONFALL enters build under this framework (per-title §2 gate
+  first); template-bootstrap prompt next.
