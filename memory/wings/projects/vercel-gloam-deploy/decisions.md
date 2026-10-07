@@ -47,3 +47,19 @@ domain — free on Hobby, instant certs, kills the Pages saga permanently.
 2. Owner: auth path — GitHub import (recommended) vs CLI token
 3. Owner: merge PR #4 (vercel config) — safe to merge anytime (inert until a Vercel project links the repo)
 4. After deploy: verify URL, 404-checks, headers, real-browser render, then hub link PR + explicit merge approval
+
+## ADR-2026-10-07-VG-08: Deployed 2026-10-07 ~15:47 EDT (all verifications PASS)
+- Project "gloam" (prj_OOxhlLS2UbE8nmDq5SezidQQq0bd) created via Vercel MCP
+  `create_git_project`, linked to nx9161/gloam, production branch main.
+- Production URL: https://gloam-nx9161s-projects.vercel.app (aliases:
+  gloam-pi.vercel.app, gloam-git-main-nx9161s-projects.vercel.app).
+- Team-default SSO Deployment Protection was ON (public 302 to sso-api) —
+  fixed via update_project: ssoProtection deploymentType "preview"
+  (production public, previews gated).
+- Verification: 200, valid TLS, all 6 AppSec headers, /src/gloam.js,
+  /tools/minify.sh, /BUILD.md, /CNAME all 404, served bytes byte-identical
+  to repo main. Real-browser: title renders, click starts run, HUD/score/
+  combo/timer live, pause/mute work, no errors.
+- Hub PR #2 (one-line href swap) open — merge gated on explicit owner approval.
+- GC condition outstanding: owner must flip the AI model-training opt-out in
+  Vercel team settings.
