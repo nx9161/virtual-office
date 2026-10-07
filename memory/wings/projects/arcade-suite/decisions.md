@@ -204,3 +204,24 @@
 - Verdict: PASS (conditional), dual-signed. Repo shall be nx9161/beamtide.
 - Suite slate updated: BEACONFALL -> BEAMTIDE everywhere. This is the gate
   working as designed — a screen that kills is a screen that works.
+
+## ADR-2026-10-07-AS-10: BEAMTIDE shipped to production (first suite title)
+- 2026-10-07: nx9161/beamtide @ 5e9fe0d built from arcade-template, deployed
+  to https://beamtide-nx9161s-projects.vercel.app (Vercel project beamtide,
+  prj_mOdHfK2OfInDwPke2mrIFmxpXWSv, iad1, main).
+- CRITICAL template fix found during build: template v1.0.0 had a boot-order
+  bug (shared.js called Game.init synchronously before concatenated game.js
+  evaluated -> TypeError, every generated title would fail to boot). Fixed
+  upstream as template v1.0.1 (commit da435fc, deferred boot), cherry-picked
+  into beamtide. All future titles inherit the fix.
+- Verification: forbidden grep clean (incl. additive beamtide-side
+  "beaconfall" check; noted CI false-positive pattern "Game contract" ->
+  "contra"); terser 5.51.2, 23,681 -> 12,976 B; 14/14 headless logic tests;
+  release-check 12/12 on production (6 headers, 404s, byte-identity);
+  production public / previews SSO-gated (GLOAM posture); KOFI-HANDLE left
+  literal per plan (blocking token for monetization).
+- Trade-dress: no formations/cadence/barriers; storm-driven spawns; beam
+  always-on (player's only verb is move); lives = 3 lamp pips; calm = ∞.
+- Outstanding: real-browser play-through (delegated). Hub card cutover
+  deferred per owner decision. Standing caveat: confirm real-internet
+  reachability from owner's browser.
