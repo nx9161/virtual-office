@@ -11,6 +11,8 @@ Paste this to any AI agent:
 
 > I want to use War Room Protocol from nx9161's github public repo.
 
+The office stays active until you say **"End War Room Protocol"**.
+
 Full activation contract (what the agent must do, step by step):
 [`ACTIVATE.md`](ACTIVATE.md).
 
