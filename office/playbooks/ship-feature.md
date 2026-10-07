@@ -7,9 +7,15 @@ subagent per step and reading each step's result before proceeding.
 Inputs: task description, branch name (default `feat/<slug>`),
 repo path (default `~/workspace/virtual-office/repo`).
 
+## Step 0 — War Room gate
+If the task touches architecture, auth, payments, personal data, or AI
+behavior — or is otherwise production-significant — run the `war-room`
+procedure first and build from its PRD and ADRs. Small, well-defined
+fixes proceed directly below.
+
 ## Step 1 — Implement
-Spawn a subagent as office developer (brief it with the matching file
-from `office/staff/`):
+Spawn a subagent as the relevant lead (brief it with the matching file
+from `office/staff/`: `lead-backend-dev.md` or `lead-frontend-dev.md`):
 - Create the branch from `main` (check out and reuse it if it exists).
 - Implement the task following `office/HOUSE_RULES.md`.
 - Commit with conventional commits. Do NOT push. Do NOT open a PR.
@@ -17,7 +23,7 @@ from `office/staff/`):
   `{"branch": "...", "files_changed": [...], "summary": "...", "test_command": "..."}`
 
 ## Step 2 — Verify
-Spawn a subagent as qa-engineer:
+Spawn a subagent as qa-manager:
 - Run the test suite and lint using the `test_command` from Step 1
   (or the repo's standard command).
 - If tests fail and the fix is obvious and small, fix and re-run
@@ -25,7 +31,7 @@ Spawn a subagent as qa-engineer:
 - Final response: brief plain-text report of what ran and pass/fail.
 
 ## Step 3 — Review (repair loop, max 3 rounds)
-Spawn a subagent as qa-engineer (fresh context preferred):
+Spawn a subagent as qa-manager (fresh context preferred):
 - Review the diff of the branch against `main`: correctness, edge cases,
   security issues, test coverage.
 - Final response must be JSON only:
@@ -37,7 +43,7 @@ Spawn a subagent as qa-engineer (fresh context preferred):
   exhausted): STOP. Do not open a PR. Report blocked with the feedback.
 
 ## Step 4 — Open PR
-Spawn a subagent (tech-writer/devops brief):
+Spawn a subagent briefed with `office/staff/devops-sre.md`:
 - Push the branch and open a PR against `main` with a clear title and
   description: summary, how to test, screenshots if visual, migration
   notes, checklist.
