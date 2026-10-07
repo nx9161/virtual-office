@@ -38,3 +38,34 @@
   maxtechlife.me Arcade wing with per-title cards; per-game cross-link footers.
 - Overdue owner action: Vercel model-training opt-out (Team Settings → Data
   Preferences) — still not flipped.
+
+## ADR-2026-10-07-AS-03: Phase 2 locked — repo template + deploy machine
+- Template repo: private nx9161/arcade-template ("Use this template"), fully
+  independent generated repos; improvements propagate as deliberate
+  cherry-pick PRs, never silent. Tree: .gitignore/.vercelignore/_headers/
+  BUILD.md/CHANGELOG.md/README.md/TEMPLATE.md, index.html (scaffold+sentinels),
+  src/shared.js (frozen shared patterns) + src/game.js (100% original per
+  title), tools/minify.sh (pinned terser) + tools/release-check.sh,
+  vercel.json (six locked headers), .github/workflows/verify-build.yml (PR
+  gate: committed index.html must equal clean rebuild).
+- Shared code duplicated frozen per repo (no package/submodule — would break
+  zero-config Vercel import or couple shipped builds). No game logic copied
+  between titles, ever.
+- FORBIDDEN in repos: third-party/IP assets, IP-homage easter eggs, public
+  copy naming inspirations, secrets (even placeholders), readable source
+  served, hand-edited bundle regions, analytics without Tech Law review.
+- Topology: ONE Vercel project per game (deploy isolation, per-project
+  rollback); production public, previews SSO-gated. New-title checklist ~15min.
+- Cloudflare migration: trigger = first dollar OR monetized launch; per-game
+  cutover ~1 day; _headers 1:1 with vercel.json; previews unguessable URLs
+  (no SSO gating on free plan — accepted gap, same public-bytes posture);
+  Vercel projects go DORMANT not deleted (warm rollback).
+- Hub: Arcade wing in maxtechlife.me (section relabeled "Arcade"); card spec
+  follows live GLOAM card; per-game #suiteFooter with hub link + Ko-fi tip
+  link (off-site anchors only, zero widgets); KOFI-HANDLE token substituted
+  per title (owner to supply handle — blocks final footer).
+- Build sequencing: BEACONFALL → MOONDRIFT → MARSHLIGHT → SEEDSTORM, strictly
+  sequential war rooms; HARD entry gate per title = Phase 3 IP sign-off;
+  done-definition mirrors the GLOAM QA bar.
+- Next: Prompt Writer perfects the template-bootstrap prompt; then
+  BEACONFALL's Phase 3 IP gate.
