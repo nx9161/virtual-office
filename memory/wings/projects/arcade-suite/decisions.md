@@ -401,3 +401,24 @@
   zero power-ups, no wrap, vocabulary). Ceiling-pinning deliberately left:
   unpinning requires redesigning the wind model; playable without it.
 - Live-browser re-verification delegated.
+
+## ADR-2026-10-07-AS-22: SEEDRIFT re-verification 3/3 — flagship slate COMPLETE
+- 2026-10-07: live-browser re-verification of the storm-cell repair: telegraphs
+  clearly visible in-playfield (multiple spawn cycles); hand-steered threading
+  reached COMBO 3 (was 0 pre-fix); drag steering pulls seed both directions.
+- FLAGSHIP SLATE COMPLETE (2026-10-07):
+  - BEAMTIDE (nx9161/beamtide): live, browser QA 9/9, Calm-bypass polish shipped.
+  - TIDELANTERN (nx9161/tidelantern): live, 20/20 headless + 18/18 browser.
+  - REEDLIGHT (nx9161/reedlight): live, 11/12 browser, heron-telegraph fix shipped.
+  - SEEDRIFT (nx9161/seedrift): live, repair proven, re-verification 3/3.
+  - All four: release-check green (6 headers, 404s, byte-identity), production
+    public / previews SSO-gated, KOFI-HANDLE literal (blocking token).
+  - Template: arcade-template v1.0.0 -> v1.0.1 (boot-order fix), 15 files,
+    private, template flag on.
+  - IP gates: 4-for-4 working-title kills (BEACONFALL, MOONDRIFT, MARSHLIGHT,
+    SEEDSTORM + HAILSEED), 4 cleared replacements, all dual-signed.
+- Outstanding per standing decisions: hub card cutover (deferred, owner call);
+  Ko-fi handle (owner supplies pre-launch); licensed-counsel review before any
+  monetized step (non-waivable); formal TESS searches per title pre-monetization.
+- Batch 2 (brawler, run-and-gun, vertical shooter, digger) awaits owner's word
+  per the quality/revenue learning gate.
