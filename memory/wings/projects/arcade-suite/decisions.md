@@ -110,3 +110,26 @@
   occupancy certificate — framework signs blueprints, counsel clears opening.
 - Next: BEACONFALL enters build under this framework (per-title §2 gate
   first); template-bootstrap prompt next.
+
+## ADR-2026-10-07-AS-05: Mission complete — all acceptance criteria met
+- Phase 4 QA gate (document mission): verified — 4 ADRs + ip-clean-framework.md
+  all present and coherent; flagship slate recorded; framework carries
+  conditional sign-offs from AppSec, Tech Law, GC; hosting/monetization
+  resolved at $0 launch cost (no owner spend approval required); no secrets
+  in any repo file.
+- Mission deliverables: (1) flagship slate BEACONFALL → MOONDRIFT → MARSHLIGHT
+  → SEEDSTORM + 3 sequenced batches; (2) IP-clean framework (10-section doc,
+  per-title clearance gate, trademark process, MOONDRIFT high-heat guardrails,
+  AppSec annex, honest residual-risk statement); (3) architecture: one private
+  repo per game from arcade-template, one Vercel project per game (staging),
+  Cloudflare Pages at first dollar, hub Arcade wing, Ko-fi tips.
+- Gates now in force: per-title Phase 3 IP clearance (both signatures) before
+  any build; AppSec hard pre-deploy condition = Vercel AI-training opt-out
+  flipped; NON-WAIVABLE licensed-counsel review before any monetized step
+  (Ko-fi links going live counts).
+- Standing owner actions: (a) flip Vercel model-training opt-out (Team
+  Settings → Data Preferences) — overdue, blocks first production deploy;
+  (b) supply Ko-fi handle before first title's footer ships.
+- Next: Prompt Writer perfects the arcade-template bootstrap prompt, then
+  BEACONFALL enters its Phase 3 per-title IP gate. Per-title builds are
+  follow-on workstreams.
