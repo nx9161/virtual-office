@@ -10,12 +10,15 @@ Naming: the War Room is the office's standing process — never rename it
 per project. Refer to sessions as "War Room Phase N — Project: X".
 
 ## Phase 1 — Intake & PRD
-Spawn Product Owner and UI/UX Designer (in parallel):
+Spawn Product Owner, UI/UX Designer, and Business Analyst (in parallel):
 - Product Owner: convert the request into a PRD — problem, user stories,
   acceptance criteria, edge cases.
 - UI/UX Designer: produce wireframes/interaction specs; interpret any
   attached screenshots or mockups.
-- Output: PRD document + design specs, stored in the palace room.
+- Business Analyst: the business case — pricing, margin impact, and
+  commercial viability of what's proposed.
+- Output: PRD document + design specs + business case, stored in the
+  palace room.
 
 ## Phase 2 — Architectural Debate
 Spawn Enterprise Architect first:
