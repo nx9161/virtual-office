@@ -1,4 +1,4 @@
-# Virtual IT Office 🏢
+# War Room Protocol 🏢
 
 An AI-run software office led by Sloane, Chief Orchestrator. Employees
 are agent profiles (`office/staff/`); work is dispatched by Sloane,
