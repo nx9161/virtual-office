@@ -163,3 +163,20 @@
   + key parity.
 - Formal trademark screening runs per title at build gates (not at concept).
   No title builds before its Phase 3 per-title IP gate.
+
+## ADR-2026-10-07-AS-08: arcade-template v1.0.0 built and verified
+- Repo: private nx9161/arcade-template, template flag ON, branch main.
+- Locked decision (Prompt Writer, Chief ratified): externalize bundle to
+  game.min.js + strict CSP (choice b) — honors signed AppSec annex over the
+  older GLOAM single-file precedent. Zero inline <script>, zero on*= handlers.
+  vercel.json holds strict CSP (script-src 'self'); style-src 'unsafe-inline'
+  deliberate (dynamic HUD styling, no script-execution risk).
+- Commits: 6e7add2 scaffold · ade428c src/shared.js frozen · a367815 stub
+  · 3fc51c4 tooling + game.min.js · 6131164 CI.
+- Terser pinned 5.51.2, three-way agreement machine-checked in CI.
+- All 5 verification checks pass (minify round-trip, local release-check,
+  CI YAML parse, forbidden grep, pin agreement).
+- Notes: gh repo create --template is a source-template flag; is_template set
+  via gh api. <TITLE> HTML-escaped in index.html; release grep covers both.
+  CI also asserts terser-pin agreement.
+- Next: BEACONFALL per-title Phase 3 IP gate, then "Use this template".
