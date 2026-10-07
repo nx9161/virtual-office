@@ -380,3 +380,9 @@
   and damage unchanged (visibility fix, not rebalance).
 - Note: Wildfire idle drain ~1.8/s (~55s to empty standing still) is
   intentionally punishing; accepted as design.
+
+## ADR-2026-10-07-AS-20: REEDLIGHT heron-telegraph fix shipped
+- 2026-10-07: commit 9b65094 — warning ellipse alpha 0.10-0.18 -> 0.40-0.60
+  with ~1s pulse during the 1.2s warning. Timing, cadence, -25 fuel hit,
+  fuel economy untouched. Terser rebuild, forbidden grep clean, release-check
+  all-green on production. REEDLIGHT fully verified.
