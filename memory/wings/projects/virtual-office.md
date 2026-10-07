@@ -2,7 +2,7 @@
 
 ## Facts
 
-- HQ repo: `nx9161/virtual-office` (private); local clone at `~/workspace/virtual-office/repo`.
+- HQ repo: `nx9161/virtual-office` (public, MIT-licensed); local clone at `~/workspace/virtual-office/repo`.
 - 11 roles in 4 divisions (Product & UX, Architecture & Code, Security & Compliance, Quality & Ops), led by Sloane (Chief Orchestrator).
 - `main` is always deployable; all changes via PR; only the owner merges to `main`.
 - Production deploys need explicit owner approval, every time.

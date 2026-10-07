@@ -1,0 +1,14 @@
+name: layer_lint
+description: >-
+  Local custom_lint plugin enforcing the Weather App clean-architecture layer
+  rules (R-9): presentation may not import data/, domain stays pure Dart, and
+  `as` casts are banned on network data (DoD#2 / B-6).
+version: 1.0.0
+publish_to: none
+
+environment:
+  sdk: ^3.6.0
+
+dependencies:
+  analyzer: ^7.0.0
+  custom_lint_builder: ^0.7.0

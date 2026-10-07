@@ -1,0 +1,58 @@
+name: weather_app
+description: >-
+  Fast, honest, privacy-first weather app. Client-only Flutter app calling the
+  keyless Open-Meteo forecast + geocoding APIs directly. No backend, no secrets.
+publish_to: none
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.6.0
+  flutter: '>=3.27.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  # State management + DI — the single mechanism (ARCHITECTURE.md ADR-02).
+  # Providers are hand-written with the plain Riverpod 3 API (plain Notifier
+  # per ADR-14/R-8); riverpod_generator stays a dev dependency for future use.
+  flutter_riverpod: ^3.4.3
+  # HTTP: interceptor chain (rate-limit / retry / sanitized logging / body-size
+  # gate) per ADR-11.
+  dio: ^5.11.1
+  # Device location (OS permission API + fix).
+  geolocator: ^14.0.0
+  # On-device reverse geocoding (primary; no network — ADR-08).
+  geocoding: ^4.0.0
+  # Two-tier cache: Hive CE boxes (forecast_cache, recent_places).
+  hive_ce: ^2.20.0
+  hive_ce_flutter: ^2.3.4
+  # Primitives: unit system, consent state, place name, theme.
+  shared_preferences: ^2.3.0
+  # Reconnect detection -> single auto-retry per reconnect (FM-1).
+  connectivity_plus: ^7.0.0
+  # Locale-aware number/date formatting (formatter spec, R-11).
+  intl: any # pinned by the Flutter SDK; do not pin manually
+  # Crash reporting only (crash-only config in lib/core/telemetry). EU DSN via
+  # --dart-define=SENTRY_DSN (see README; Tech Law C3).
+  sentry_flutter: ^8.0.0
+  # Needed only to resolve the Sentry envelope-cache dir for the opt-out purge
+  # (B-7 / LOW-3). No other use.
+  path_provider: ^2.1.5
+  # SHA-256 cache-key hashing (B-1 / HIGH-1).
+  crypto: ^3.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  custom_lint: ^0.7.0
+  riverpod_lint: ^3.0.0
+  riverpod_generator: ^3.0.0
+  build_runner: ^2.15.0
+  mocktail: ^1.0.0
+  # Local layer-enforcement lint plugin (R-9: import_lint/custom_lint rules in CI).
+  layer_lint:
+    path: tool/layer_lint
+
+flutter:
+  uses-material-design: true
