@@ -48,3 +48,4 @@
   installs, no exfiltration/phone-home without owner approval,
   secrets/keys/accounts stop the hunt and escalate. House rules §8.
 - **Owner:** Naman
+| 2026-10-07 | Weather App project removed per owner request | PR #3 closed unmerged, issue #4 closed, feat/weather-app-qa-fixes branch deleted, apps/weather_app/ code, CI workflow, and palace room removed. All recoverable from git history. | owner |
