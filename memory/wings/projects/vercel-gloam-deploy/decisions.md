@@ -63,3 +63,12 @@ domain — free on Hobby, instant certs, kills the Pages saga permanently.
 - Hub PR #2 (one-line href swap) open — merge gated on explicit owner approval.
 - GC condition outstanding: owner must flip the AI model-training opt-out in
   Vercel team settings.
+
+## ADR-2026-10-07-VG-09: Hub cutover merged 2026-10-07 ~15:55 EDT
+- Owner approved merge ("Merge it"). PR #2 merged: GLOAM card href →
+  https://gloam-nx9161s-projects.vercel.app. Pages build "built"; live bytes
+  verified (200, new href present).
+- Follow-up: card's visible url-line label still showed the old subdomain —
+  fixed in PR #3 (one-line text change), open pending owner merge.
+- GC condition outstanding: owner flips AI model-training opt-out in Vercel
+  team settings (manual, dashboard).
