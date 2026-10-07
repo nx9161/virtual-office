@@ -29,7 +29,7 @@ explicit approval.
 
 ## Office docs
 - [Office handbook](office/README.md)
-- [Memory Palace](office/palace/README.md) — shared agent knowledge store
+- [Memory Palace](memory/INDEX.md) — repo-based shared memory (Memory Operations Protocol in `AGENTS.md`)
 - [Decisions log](office/log/decisions.md)
 - [Playbooks](office/playbooks/) — intake, war-room, ship-feature, fix-ci
 - [Deploy script](office/scripts/deploy_target.sh) — USB hardware deploy

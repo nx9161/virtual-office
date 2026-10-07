@@ -16,8 +16,8 @@ Welcome to the office. This folder is the office's memory and rulebook.
 - **playbooks/** — repeatable procedures, run by spawning one subagent
   per step: `intake`, `war-room`, `ship-feature`, `fix-ci`.
 - **scripts/** — automation, e.g. `deploy_target.sh` (USB device deploy).
-- **palace/** — the Memory Palace: shared multi-agent knowledge store
-  (wings → rooms → halls). Read before acting; write as you go.
+- **palace/** → retired; memory now lives in `/memory/` (see repo-root
+  `AGENTS.md` for the Memory Operations Protocol).
 - **log/decisions.md** — every significant decision, dated.
 - **log/runs/** — journal entries for each task run.
 
