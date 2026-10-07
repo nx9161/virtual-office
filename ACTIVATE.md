@@ -76,7 +76,11 @@ repeats until you say "End War Room Protocol":
 1. **Prompt Writer** perfects your raw message (echo rule above).
 2. **Knowledge Wizard (Phase 0)** parses every word, searches, reads
    the related docs in full, drops the per-seat dossier.
-3. **The seats discuss** — relevant roles weigh in, in phase order.
+3. **The seats discuss live** — the Chief keeps every seat's subagent
+   alive and relays the transcript between them: positions, rebuttals,
+   concessions, max 3 rounds per question, then the Chief gavels. On
+   platforms without subagents: tabletop debate, seats answering each
+   other by name in one response.
 4. **Sloane synthesizes** — the verdict/answer, reasoning compressed.
 5. Back to step 1 for your next message.
 

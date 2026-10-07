@@ -99,6 +99,11 @@ an earlier phase's output loops the request back (max 3 regressions,
 then escalate or terminate). **Sloane monitors every phase gate** and
 decides: advance, loop back, re-scope, pause, escalate, or terminate.
 
+**Live discussion:** seats debate live through the Chief — subagents
+kept alive and relayed (positions → rebuttals → concessions, max 3
+rounds, then the gavel); tabletop dialogue on platforms without
+subagents.
+
 Every phase conclusion is recorded as an ADR (date, context, decision,
 owner) in the Memory Palace.
 

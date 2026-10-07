@@ -74,3 +74,16 @@
   terminate. Hard boundaries preserved: money, production deploys, and
   external commitments still need the owner's explicit approval.
 - **Owner:** Naman
+
+## 2026-10-07 — Live discussion: seats debate each other
+- **Context:** Owner wants subagents to discuss live with each other,
+  on every platform including chats without subagent support.
+- **Decision:** Added live-discussion procedure to the war-room
+  playbook: Chief keeps all seat subagents alive, opens with the
+  motion, runs positions → open floor (rebut/support/concede via
+  relayed transcript), max 3 rounds per question, then gavels and
+  synthesizes. Discussion rules: evidence or concede, no repeats,
+  concessions are room wins, blocks need evidence. Tabletop mode for
+  no-subagent platforms: the agent writes the debate as live dialogue,
+  seats answering by name. Chief staff files gained facilitator duty.
+- **Owner:** Naman

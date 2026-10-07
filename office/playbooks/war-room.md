@@ -78,6 +78,38 @@ materially changes the output of an earlier Phase M:
    Downstream phases always work from the latest version, never stale
    output.
 
+## Live discussion (the room talks)
+Seats don't just report — they discuss with each other, live. The
+Chief runs it:
+
+**On platforms with real subagents:**
+1. The Chief spawns one subagent per participating seat and keeps them
+   all alive for the session — nobody is closed until the verdict.
+2. The Chief opens with the motion: the perfected prompt plus the exact
+   question to resolve.
+3. **Round 1 — positions:** each seat states its position with evidence,
+   in phase order.
+4. **Open floor:** any seat may answer any other seat — rebut, support
+   with new evidence, or concede. The Chief relays the running
+   transcript so every seat sees every point.
+5. Rounds continue until consensus, or only wording remains.
+6. **The gavel:** max 3 discussion rounds per question — then the Chief
+   decides (or escalates). No filibusters.
+7. The Chief synthesizes the verdict; each seat's final position is
+   recorded in the ADR.
+
+**Discussion rules (all platforms):**
+- Address the point, not the seat. Bring evidence or concede.
+- Never repeat a made point — new information or silence.
+- Conceding when convinced is recorded as a win for the room.
+- Blocking seats argue their block with evidence; the Chief can only
+  overrule a block with the owner's written risk acceptance.
+
+**Tabletop mode (no subagents):** the agent writes the debate as a live
+dialogue in its response — seats answering each other by name, with
+rebuttals and concessions, then the Chief's verdict. A real debate, not
+a list of independent statements.
+
 ## Rules
 - Skipping the War Room for production changes requires Sloane's
   explicit waiver, recorded as an ADR.
