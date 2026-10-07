@@ -5,8 +5,9 @@ Welcome to the office. This folder is the office's memory and rulebook.
 - **HOUSE_RULES.md** — binding rules for every employee.
 - **PLAN.md** — the founding plan.
 - **staff/** — employee profiles. Hiring someone new = adding a file here.
-- **playbooks/** — saved multi-agent workflows (`ship-feature`, `fix-ci`).
-  Launchable by name, any time.
+- **playbooks/** — repeatable procedures (`ship-feature`, `fix-ci`).
+  The orchestrator (Office Manager, triage, or watcher) runs them by
+  spawning one employee subagent per step.
 - **log/decisions.md** — every significant decision, dated.
 - **log/runs/** — journal entries for each task run.
 
