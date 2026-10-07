@@ -180,3 +180,27 @@
   via gh api. <TITLE> HTML-escaped in index.html; release grep covers both.
   CI also asserts terser-pin agreement.
 - Next: BEACONFALL per-title Phase 3 IP gate, then "Use this template".
+
+## ADR-2026-10-07-AS-09: BEAMTIDE clears the first per-title IP gate (BEACONFALL killed)
+- 2026-10-07: first per-title Phase 3 gate ran (Tech Law Lead + General
+  Counsel + AppSec, Chief presiding). The screen KILLED the working title
+  BEACONFALL: identical mark in commercial use — "BEACONFALL" (Steam,
+  released 17 Jul 2026, Game Dynasty), a strategy game whose theme is
+  "defend an island settlement, lighthouse holds back the darkness" —
+  overlapping theme as well as identical mark. Additional identical-mark uses
+  on itch.io. No argument available; retirement is a compliance instruction.
+- Four replacement candidates screened and killed in-gate (WICKLIGHT,
+  TIDEWARDEN, SEAWICK, STORMWARDEN — existing uses / crowded terms /
+  phonetic fights). Selected: BEAMTIDE — coined word, zero game-title hits
+  across Steam / App Store / Google Play / itch.io / web; only low-risk near
+  neighbors documented (Beamrider 1983 — different coined mark).
+- USPTO limitation stated in the clearance record: no TESS records surfaced
+  via web search, but no direct TESS query was run in-gate — formal TESS +
+  common-law search by licensed counsel required before any monetized step.
+- Original-expression inventory + trade-dress review + clean-design check
+  all pass; §3 design commitments (no row formations, no fixed descent
+  cadence, no barriers, organic weather-driven dives) are BINDING on the
+  build; drift triggers fresh Phase 3 review.
+- Verdict: PASS (conditional), dual-signed. Repo shall be nx9161/beamtide.
+- Suite slate updated: BEACONFALL -> BEAMTIDE everywhere. This is the gate
+  working as designed — a screen that kills is a screen that works.
