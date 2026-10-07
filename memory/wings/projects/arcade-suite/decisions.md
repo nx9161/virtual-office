@@ -386,3 +386,18 @@
   with ~1s pulse during the 1.2s warning. Timing, cadence, -25 fuel hit,
   fuel economy untouched. Terser rebuild, forbidden grep clean, release-check
   all-green on production. REEDLIGHT fully verified.
+
+## ADR-2026-10-07-AS-21: SEEDRIFT storm-cell repair shipped and proven
+- 2026-10-07: commit 3863141 — cells now spawn in the visible playfield
+  (gust-band y in [40,280], was y=-h-20 off-screen); inBand thread zone =
+  visible cell rect + margin, reachable by lateral steering alone; telegraph
+  label moved inside the rect.
+- Headless proof (deterministic PRNG): telegraph renders on-screen;
+  scripted lateral-only player reached maxCombo=8 over 600 sim-seconds —
+  "thread the hail" hook functions; drag pull confirmed (x 230->424);
+  permanent momentum + mile accumulation unregressed. Terser 5.51.2,
+  28,706 -> 15,186 B. Release-check all-green on production.
+- Binding commitments preserved (lateral nudges only, telegraph timing,
+  zero power-ups, no wrap, vocabulary). Ceiling-pinning deliberately left:
+  unpinning requires redesigning the wind model; playable without it.
+- Live-browser re-verification delegated.
