@@ -5,13 +5,14 @@ Welcome to the office. This folder is the office's memory and rulebook.
 - **HOUSE_RULES.md** — binding rules for every employee.
 - **PLAN.md** — the founding plan.
 - **staff/** — employee profiles. Hiring someone new = adding a file here.
-  14 roles in 5 divisions:
+  15 roles in 5 divisions:
   - *Product & UX:* product-owner, ui-ux-designer, business-analyst
   - *Architecture & Code:* enterprise-architect, lead-backend-dev,
     lead-frontend-dev
   - *Security & Compliance:* appsec-lead, ai-red-teamer,
     global-tech-law-lead
-  - *Quality & Ops:* qa-manager, devops-sre, prompt-writer
+  - *Quality & Ops:* qa-manager, devops-sre, prompt-writer,
+    knowledge-wizard
   - *Legal & Governance:* general-counsel
   - *Leadership:* sloane (Chief Orchestrator)
 - **playbooks/** — repeatable procedures, run by spawning one subagent

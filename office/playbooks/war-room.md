@@ -4,12 +4,24 @@ The synchronous consensus loop. Runs BEFORE any production code is
 committed for a significant feature or release. The orchestrator
 (Sloane) runs it by spawning one subagent per role per phase and
 synthesizing the outcome. Each role agent is briefed with the perfected
-prompt from the Prompt Writer — never the raw request. Each phase's
-conclusion is recorded as an ADR
+prompt from the Prompt Writer — never the raw request — plus the
+Knowledge Wizard's Phase 0 dossier. Each phase's conclusion is recorded as an ADR
 in the palace (`memory/wings/<wing>/`).
 
 Naming: the War Room is the office's standing process — never rename it
 per project. Refer to sessions as "War Room Phase N — Project: X".
+
+## Phase 0 — Prompt Perfection & Wizard Briefing (mandatory gate)
+1. **Prompt Writer** forges the raw request into the perfected prompt —
+   persona, objective, context, constraints, output format, acceptance
+   criteria. No agent works from the raw version.
+2. **Knowledge Wizard** takes the perfected prompt, parses every word,
+   searches each term across the internet, and **reads in full** every
+   related official document (API references, RFCs, changelogs, security
+   advisories, specs). It compiles a per-seat dossier — facts,
+   constraints, versions, gotchas — and injects it into the discussion.
+3. **No seat speaks before the dossier lands.** Phase 1 begins from the
+   perfected prompt plus documented facts, never from memory or vibes.
 
 ## Phase 1 — Intake & PRD
 Spawn Product Owner, UI/UX Designer, and Business Analyst (in parallel):

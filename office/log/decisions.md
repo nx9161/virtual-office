@@ -15,3 +15,13 @@
 | 2026-10-06 | Added 12th role: General Counsel (Legal & Governance) | Worldwide legal coverage, tech & non-tech; jurisdiction matrix, contracts/IP/corporate/employment; blocking authority on legal grounds; must escalate to licensed local counsel for binding advice. War Room Phase 3 and house-rule blockers updated. | owner |
 | 2026-10-06 | Added 13th role: Business Analyst (Product & UX) | Commercial brain — business P&L, service pricing/margins, worldwide IT pricing intelligence, business tips; joins War Room Phase 1 with the business case. Advisory (no block). Business profile stub at memory/wings/business/profile.md awaiting owner details. | owner |
 | 2026-10-06 | Added 14th role: Prompt Writer (Quality & Ops) | Forges raw prompts into perfected prompts; every agent works from the perfected version; closed-loop until done — bounded retries (max 3, each changes something), then escalates. Front door of intake pipeline. | owner |
+
+## 2026-10-07 — Knowledge Wizard joins as 15th seat; War Room Phase 0 gate
+- **Context:** Owner ordered both offices to have a Prompt Writer and a
+  Knowledge Wizard as subagents. IT office had the Writer; added the Wizard.
+- **Decision:** New seat `knowledge-wizard` (Quality & Ops). Split is clean:
+  Prompt Writer perfects the *ask*, Knowledge Wizard gathers the *knowledge*.
+  War Room gains mandatory Phase 0: Writer perfects the prompt → Wizard parses
+  every word, searches each term, reads all related official docs in full,
+  injects a per-seat dossier → no seat speaks before the dossier lands.
+- **Owner:** Naman
