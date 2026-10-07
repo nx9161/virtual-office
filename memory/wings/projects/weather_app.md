@@ -53,3 +53,12 @@ Mission: production-grade Flutter weather app (Android minSdk 24, iOS 15.0+), Op
 - Red Team: CONDITIONAL CLEAR — body-size gate ≤512 KB before `jsonDecode` mandatory (AC-4b); control-char stripping; 429 telemetry; cache HMAC or rationale; OS-grant test.
 - Tech Law: CLEAR WITH CONDITIONS C1–C7 — C1 closed (design-spec "~1 km" copy fixed); C2 privacy notice 12-section spec; C3 Sentry EU DSN + DPA = owner action; C5 controller = owner (not Open-Meteo); F1–F4 real-counsel flags = owner action.
 - Full record: `apps/weather_app/docs/WAR_ROOM_RECORD.md`. Build entry criteria all met; build phase started.
+
+## War Room complete — delivered 2026-10-06/07
+- **PR:** #3 `feat/weather-app-qa-fixes` — full Flutter app (lib/, test/ 300+ assertions, tool/build.sh, tool/bootstrap.sh, CI workflow, README) + all QA-gate fixes. **Not merged — awaiting owner.**
+- **Intake issue:** #4 "Project: Weather App" (labeled `ready`), PR linked in comment.
+- **Initial ADR (project kickoff):** client-only Flutter app, Open-Meteo keyless APIs, Riverpod 3, zero-trust two-tier validation, GDPR consent-first geolocation — see `apps/weather_app/docs/WAR_ROOM_RECORD.md` for all 18 rulings + Phase 3 verdicts.
+- **Security/compliance final:** AppSec BLOCK cleared as B-1…B-7 (implemented + backend-verified); Red Team conditional clear (body-size gate landed); Tech Law clear with C1–C7 (C3/F1–F4 = owner actions).
+- **Verification gaps (merge prerequisites):** `flutter analyze/test` not run (no SDK on build VM) — CI on PR #3; operator runs `tool/bootstrap.sh` once + commits `pubspec.lock`; device runs needed for perf/a11y/staged rollout.
+- **Incident 2026-10-06 21:22 EDT:** parent committed a partial mid-build snapshot directly to main (`38a7a53`, pushed) while the War Room was in flight — bypassed the PR flow; the complete app arrived via PR #3 instead. Stale branch `feat/weather-app` (at ec517fd) superseded by `feat/weather-app-qa-fixes`.
+- **Repo visibility:** repo made PUBLIC (MIT) 2026-10-06 — owner to confirm intended.
