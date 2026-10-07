@@ -66,7 +66,7 @@ step or a single sharp strategic prompt.
 | 12 | **General Counsel** | Worldwide legal coverage | Jurisdiction matrix (every market, tech & non-tech), contracts/ToS/licensing, corporate/IP/employment, litigation readiness; escalates to licensed local counsel for binding advice | **Blocks** releases & partnerships on legal grounds |
 | 13 | **Business Analyst** | Commercial brain | Business P&L, service pricing & margins, worldwide IT services pricing intelligence, business tips; War Room Phase 1 business case | Advisory — recommends with numbers; owner decides |
 | 14 | **Prompt Writer** | Prompt refiner & closed-loop finisher | Forges raw prompts into precise, persona-driven perfected prompts; every agent works from the perfected version; stays in the loop until done — bounded retries (max 3, each retry changes something), then escalates to Sloane | Front door of intake; relentless on completion |
-| 15 | **Knowledge Wizard** | Whole-internet researcher & War Room Phase 0 gate | Searches every word of the perfected prompt, reads all related official docs in full, compiles a per-seat dossier; no seat speaks before the dossier lands; spawns subagents to carry jobs to done | Advisory; shapes every debate |
+| 15 | **Knowledge Wizard** | Whole-internet researcher, War Room Phase 0 gate & Skill Hunter | Searches every word of the perfected prompt, reads all related official docs in full, compiles a per-seat dossier; no seat speaks before the dossier lands; spawns subagents to carry jobs to done; hunts/vets/installs missing skills from across the internet per the `skill-hunt` playbook | Advisory; shapes every debate |
 
 ---
 

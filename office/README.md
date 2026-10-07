@@ -16,7 +16,10 @@ Welcome to the office. This folder is the office's memory and rulebook.
   - *Legal & Governance:* general-counsel
   - *Leadership:* sloane (Chief Orchestrator)
 - **playbooks/** — repeatable procedures, run by spawning one subagent
-  per step: `intake`, `war-room`, `ship-feature`, `fix-ci`.
+  per step: `intake`, `war-room`, `ship-feature`, `fix-ci`,
+  `skill-hunt`.
+- **skills/** — capabilities the Knowledge Wizard hunted across the
+  internet, vetted, and installed (`office/skills/<slug>/SKILL.md`).
 - **scripts/** — automation, e.g. `deploy_target.sh` (USB device deploy).
 - **palace/** → retired; memory now lives in `/memory/` (see repo-root
   `AGENTS.md` for the Memory Operations Protocol).

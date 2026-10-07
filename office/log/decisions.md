@@ -35,3 +35,16 @@
   confirm with the exact activation line) and an "Activate this office"
   section in the README with the copy-paste trigger phrase.
 - **Owner:** Naman
+
+## 2026-10-07 — Skill Hunt: Wizard finds/vets/installs skills from the whole internet
+- **Context:** Owner ordered that the Knowledge Wizard find every
+  existing skill (GitHub public repos, Hugging Face, registries, open
+  web), install it, wire up all required tools, and go down the rabbit
+  hole until the task is executable.
+- **Decision:** New `skill-hunt` playbook (define → hunt → vet →
+  install → wire tools recursively → test → record); skills live in
+  `office/skills/<slug>/SKILL.md` with a registry; Wizard owns it, any
+  seat can request a hunt. Guardrails: provenance recorded, no blind
+  installs, no exfiltration/phone-home without owner approval,
+  secrets/keys/accounts stop the hunt and escalate. House rules §8.
+- **Owner:** Naman
