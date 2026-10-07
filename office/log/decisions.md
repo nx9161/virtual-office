@@ -6,3 +6,4 @@
 | 2026-10-06 | Authority default: employees work on branches and open PRs; only the owner merges to `main`; production deploys need explicit approval every time. | owner |
 | 2026-10-06 | Playbooks v1 registered: `ship-feature` (implement→verify→review→PR with repair loop), `fix-ci` (diagnose→fix→verify). | office-manager |
 | 2026-10-06 | Routines v1: daily triage 09:00 ET, weekly report Monday 09:00 ET, new-issue watcher hook. | office-manager |
+| 2026-10-06 | Fixed ship-feature playbook result parsing: agent results arrive wrapped in a {status, result} envelope (sometimes as JSON strings). Added lenient parsing + envelope unwrapping, verified with local tests. | office-manager |
