@@ -15,3 +15,6 @@
 ## Deployment targets
 
 - (none registered yet)
+
+## Standing rules
+- **Every new game build gets its own War Room first (2026-10-08, owner order).** No game build starts without a full War Room discussion — concept, design, IP-clean check, and build plan are debated and signed before any repo is created. Applies to all future titles including the 5 cleared Batch 3 titles (CROAKSCALE, THERMALANCE, LANTERNRAIL, CISTERNLIGHT, STORMBREAK).
