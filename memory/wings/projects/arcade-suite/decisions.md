@@ -449,3 +449,30 @@
   original (no recognizable run-and-gun weapon/power-up taxonomies, names,
   art, or sound vocabularies); living briar-wall stages; botanical bosses.
 - Repo shall be nx9161/briarline. Gates now 6 total: 4 kills, 3 survivors.
+
+## ADR-2026-10-08-AS-25: FOGCHART clears Batch 2 gate (title survives)
+- 2026-10-08: Batch 2 gate (vertical shooter). "FOGCHART" SURVIVES — no
+  commercial game on any venue. Sole near-neighbor "FogChat" (defunct Jul
+  2025 social app, different class) recorded non-dispositive. Dual-signed
+  CONDITIONAL PASS.
+- Locked design: swift (bird) cartographer protagonist — no jets/spacecraft;
+  THE MAP IS THE SCORE (tile-charting primary, enemies re-fog territory, no
+  per-kill points); 100%-charted prestige runs; no copied bullet-pattern
+  choreography/stage layouts/palettes; watercolor storm-sky + chart-parchment
+  UI; no power-up-letter taxonomy.
+- Repo shall be nx9161/fogchart.
+
+## ADR-2026-10-08-AS-26: STALLBREAKER clears Batch 2 gate (title survives; record formalized)
+- 2026-10-08: Batch 2 gate (brawler). "STALLBREAKER" SURVIVES — no game
+  title/app/Steam/itch.io collision. Near neighbors all low-risk
+  ("Steelbreakers" itch.io brawler — different coined mark/leading element;
+  "Stone Breaker", "Backbreaker", "Game Breaker"). First session delivered
+  only a teaser; reconvened session formalized the dual-signed record from
+  recovered screen findings. Process note: gate agents must output the full
+  clearance record as their final response, not a teaser.
+- Locked design: noodle vendor wins back stolen cart; MARKET IS THE WEAPON
+  (shove enemies into stalls — soup vats, awnings, lantern poles;
+  environmental takedowns); market reopens behind with fresh hazards;
+  enemy/hazard/stage taxonomy wholly original; no copied brawler archetypes,
+  stage compositions, or UI layouts.
+- Repo shall be nx9161/stallbreaker. Batch 2 gates: 4-for-4 PASS.
