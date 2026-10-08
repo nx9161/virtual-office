@@ -593,3 +593,18 @@
   pause-on-blur is intentional and signaled).
 - Findings forwarded to the Game Feel overhaul coordinator for the FOGCHART
   builder.
+
+## ADR-2026-10-08-AS-34: CISTERNLIGHT clears Batch 3 gate (DEEPHOLD killed)
+- 2026-10-08: Batch 3 gate (dungeon crawler). "DEEPHOLD" KILLED: identical
+  mark — "Deephold" tower defense (Chuckwalla Works, Steam May 2026).
+  Replacements MOSSDEEP (Pokemon-adjacent) and WICKDEEP (leading-element
+  collision with "Wick") also killed in-room. Selected: CISTERNLIGHT —
+  zero game uses, face-safe. Dual-signed CONDITIONAL PASS.
+- Locked design: moss-delvers in sunken cistern; LIGHT IS THE SHARED
+  HEALTH POOL (one lantern, darkness damage splits across whoever is lit,
+  glowcaps refuel light not HP); original cistern fauna; drowned-stone/
+  bioluminescent art; local co-op or AI party only (no networked multi
+  without fresh review).
+- Repo shall be nx9161/cisternlight. "deephold"/"mossdeep"/"wickdeep"
+  barred from all materials. Gates now 7 total: 5 kills (+2 replacement
+  kills), 6 survivors.
