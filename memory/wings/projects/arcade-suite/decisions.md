@@ -676,3 +676,17 @@
   come-from-below reversal clips as viral hook.
 - Repo shall be nx9161/thermalance. "skylance" barred from all materials.
   Gates now 11 total: 8 kills, 10 survivors.
+
+## ADR-2026-10-08-AS-40: Owner halted Game Feel overhaul (/stop)
+- 2026-10-08: owner issued "/stop". Game Feel overhaul coordinator and its
+  per-title builders were shut down mid-flight. No feel fixes were merged
+  by this program; the 8 deployed titles remain at their last shipped
+  commits (BEAMTIDE, TIDELANTERN, REEDLIGHT, SEEDRIFT, STALLBREAKER,
+  BRIARLINE, FOGCHART, BURROWLIGHT).
+- Batch 3 gates completed BEFORE the stop: all 5 cleared (CROAKSCALE,
+  THERMALANCE, LANTERNRAIL, CISTERNLIGHT, STORMBREAK). No Batch 3 builds
+  were started. Pipeline is fully paused pending owner's next direction.
+- Known unresolved quality findings preserved for resume: Space/Enter pause-
+  resume bug is TEMPLATE-level (shared.js), confirmed on 3 titles
+  (STALLBREAKER, FOGCHART, BURROWLIGHT); STALLBREAKER browser QA human-feel
+  failures; FOGCHART 11/12; BURROWLIGHT 10/11.
