@@ -805,3 +805,20 @@
 - G-1 byte-verify spec updated: compare served /game.min.js against the
   repo blob at these new commit SHAs (content unchanged from the
   cherry-picks).
+
+## ADR-2026-10-08-AS-46: G-1 deploy verification PASSED all 8; v1.0.2 tagged; G-4 Track A SIGNED
+- 2026-10-08 (~00:55 EDT): Owner gave explicit production-deploy approval.
+  Pushed the 7 author-corrected retrigger commits (beamtide 8a47d05,
+  reedlight 382656c, seedrift dfb1b58, stallbreaker 9b8a027, briarline
+  9c6d834, fogchart aa0dc12, burrowlight 8f29dc4). Vercel auto-deployed all
+  within ~1 min. G-1 byte-verification: served /game.min.js is
+  BYTE-IDENTICAL to repo main on ALL 8 titles (md5 match per title).
+- Tagged v1.0.2 (annotated) on arcade-template commit b7191c7, pushed to
+  origin. Per the room's order the tag stays on b7191c7; the blur-pause
+  signaling commit (8f74b0b) is template-only for now — its propagation to
+  games is an open follow-up for the v1.0.3 train.
+- G-4 Track A SIGN-OFF: pause defect fixed at template level, propagated
+  identically to all 8 (shared.js byte-identical except sanctioned NS slug),
+  tidelantern double-fire fixed, FOGCHART title advance + blur-pause
+  covered, regression checklist green. Sloane signs Track A complete.
+  Track B (STALLBREAKER retune pass 1) authorized to begin.
