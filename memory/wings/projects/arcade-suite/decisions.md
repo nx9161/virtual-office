@@ -662,3 +662,17 @@
   scoring; perfect-song prestige runs.
 - Repo shall be nx9161/croakscale. "sporesong" barred from all materials.
   Gates now 10 total: 7 kills, 9 survivors.
+
+## ADR-2026-10-08-AS-39: THERMALANCE clears Batch 3 gate (SKYLANCE killed)
+- 2026-10-08: Batch 3 gate (flappy combat). "SKYLANCE" KILLED: active
+  "SKYLANCE" mobile-game studio on Google Play (Ecto Rush, Aquantika) —
+  MARSHLIGHT precedent applied. Replacement GALEJOUST rejected on
+  trade-dress grounds ("joust" is the antecedent's generic loop term;
+  framework demands distance). Selected: THERMALANCE (thermal + lance —
+  fictionally native, zero collisions). Dual-signed CONDITIONAL PASS.
+- Locked design: swift-rider (original, not a knight) jousts magpie rivals
+  with reed lance; THERMALS as free lift (readable rising-air ribbons),
+  flapping spends stamina; higher rider wins via thermal positioning;
+  come-from-below reversal clips as viral hook.
+- Repo shall be nx9161/thermalance. "skylance" barred from all materials.
+  Gates now 11 total: 8 kills, 10 survivors.
