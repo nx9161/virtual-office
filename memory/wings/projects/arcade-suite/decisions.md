@@ -493,3 +493,20 @@
 - Standing hard boundaries unchanged: no spend, no Ko-fi/monetization
   without licensed-counsel review, hub cutover stays owner-deferred,
   formal TESS searches pre-monetization.
+
+## ADR-2026-10-08-AS-28: STALLBREAKER shipped to production (Batch 2 #1)
+- 2026-10-08: nx9161/stallbreaker @ f6737f2 built from template v1.0.1,
+  deployed to https://stallbreaker-nx9161s-projects.vercel.app (Vercel
+  project prj_uze2yy5kpCDdzSPgzMSmSk7HVV32, main, auto-deploy).
+- Design: noodle vendor (apron, headband, ladle) vs cart-snatcher thugs,
+  single-screen night market (portrait 480x720); SHOVE (K/X or swipe) knocks
+  thugs into stalls (soup vat/awning/lantern pole/pickle barrel) for
+  environmental takedowns (50+combo*10, +12% reclaim, combo++); direct punch
+  KOs pay 10/+4% — market is the prestige play. Thugs telegraph wind-ups
+  (0.45-0.65s); 3 grit pips; stalls reshuffle every 30s; used stall dims 7s
+  (never destroyed — market is the ally). Win at 100% reclaim ("Cart
+  reclaimed!"); lose at 0 grit. Calm = endless stroll, skips difficulty.
+- Verification: 15/15 headless + 2/2 targeted takedown proof (scripted
+  shove-into-stall: combo 0->1); release-check all-green; forbidden grep
+  clean; terser 5.51.2, 30,098 -> 17,356 B.
+- Live-browser QA outstanding (delegated).
