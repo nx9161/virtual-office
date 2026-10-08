@@ -608,3 +608,16 @@
 - Repo shall be nx9161/cisternlight. "deephold"/"mossdeep"/"wickdeep"
   barred from all materials. Gates now 7 total: 5 kills (+2 replacement
   kills), 6 survivors.
+
+## ADR-2026-10-08-AS-35: BURROWLIGHT browser QA 10/11 (Space/Enter pause bug)
+- 2026-10-08: live Chromium play-through — 10 PASS, 1 FAIL. Dig/flood/
+  collapse loop verified readable and satisfying; collapse impassable;
+  mite bites cost lives; level progression works; Calm endless.
+- FAIL: Space/Enter do NOT resume from pause (only P/Esc/button) — third
+  title with the identical bug (STALLBREAKER, FOGCHART). Confirms a
+  template-level defect in shared.js pause-resume wiring, not per-title
+  bugs. Feel overhaul must fix it in the TEMPLATE (v1.0.2) and propagate
+  to all titles, not patch per-game.
+- Minor: level counter jumped Lv 1 -> Lv 3 after one clearing — flagged
+  for the BURROWLIGHT feel builder.
+- Findings forwarded to the Game Feel overhaul coordinator.
