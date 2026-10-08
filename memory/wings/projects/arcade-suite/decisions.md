@@ -752,3 +752,22 @@
   no change this round.
 - Standing constraints honored: GLOAM untouched; no title ships until
   fun-verified in a real browser; scope held to the two tracks.
+
+## ADR-2026-10-08-AS-43: STALLBREAKER retune one-pager REJECTED by Game Producer (resubmit required)
+- 2026-10-08 (~22:20 EDT): Game Producer reviewed the Track B retune
+  one-pager (design/stallbreaker-retune-onepager.md, Rev 1) against AS-42
+  and REJECTED it. Six revisions required, all owned by Gameplay: (1) lock
+  the intended Ember median survival target — the Producer does not invent
+  balance numbers (floor to beat: 6-17s); (2) restore the converged takedown
+  feedback stack (hit-stop + shake + 2x lingering pop + first-takedown
+  tutorial) with concrete acceptance notes — no "prototyped at
+  implementation" vagueness; (3) add converged "stall glow" to Calm spec;
+  (4) state the full shove-deceleration change (pow(0.001)->pow(0.02),
+  ~180-220px); (5) "2x scale minimum" (not fixed 2x) for hearts; (6) state
+  the 3-pass retune bound + escalation path. Approved as-is on resubmit:
+  all Ember constants, shove geometry, hearts spec, Calm
+  banner/pedestrians/SAFE hearts/CALM chip, DO NOT IMPLEMENT discipline.
+- Gameplay revising (Rev 2). Producer signs on compliant resubmit; retune
+  pass 1 may then begin at repo level. Design sign-off covers design only;
+  Vercel pipeline repair + production-deploy approval remain the owner's
+  separate human gates.
