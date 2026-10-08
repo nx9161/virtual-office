@@ -621,3 +621,15 @@
 - Minor: level counter jumped Lv 1 -> Lv 3 after one clearing — flagged
   for the BURROWLIGHT feel builder.
 - Findings forwarded to the Game Feel overhaul coordinator.
+
+## ADR-2026-10-08-AS-36: STORMBREAK clears Batch 3 gate (title survives)
+- 2026-10-08: Batch 3 gate (city smasher). "STORMBREAK" SURVIVES — no
+  commercial game on any venue. Near uses all non-conflicting (Halo 5 map
+  name, Dragon Age item, card-game DLC/events, "-er" suffixed film/app
+  uses in other industries). Dual-signed CONDITIONAL PASS.
+- Locked design: storm giants (original weather-borne colossi) vs folded-
+  paper city defended by kite corps; NET DESTRUCTION (city rebuilds during
+  play, score = net ruin at the bell — race the rebuild); CATCH-NOT-HARM
+  (falling townsfolk caught for bonuses, never rewarded for harm);
+  watercolor storm-sky + paper-tear percussion.
+- Repo shall be nx9161/stormbreak. Gates now 8 total: 5 kills, 7 survivors.
