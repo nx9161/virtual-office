@@ -436,3 +436,16 @@
   visual language.
 - Repo shall be nx9161/burrowlight. Gates now 5 total: 4 kills, 2 survivors
   (BURROWLIGHT + STALLBREAKER screen-pass pending formal record).
+
+## ADR-2026-10-08-AS-24: BRIARLINE clears Batch 2 gate (title survives)
+- 2026-10-08: Batch 2 gate (run-and-gun). "BRIARLINE" SURVIVES — zero game
+  uses on any venue. Non-conflicting noise: Briarline Ltd (UK real-estate
+  micro-entity, different goods class), Briarline Corp (Panama shell),
+  "Briar" ecosystem (LoL champion, messenger app — none is the mark).
+  Dual-signed CONDITIONAL PASS.
+- Locked design: hedgerow warden (original, no soldier/hero archetype);
+  PLANT-YOUR-ARSENAL (pickups are seeds sown at checkpoints, grown into
+  next-life weapons; death = planning horizon); weapon taxonomy wholly
+  original (no recognizable run-and-gun weapon/power-up taxonomies, names,
+  art, or sound vocabularies); living briar-wall stages; botanical bosses.
+- Repo shall be nx9161/briarline. Gates now 6 total: 4 kills, 3 survivors.
