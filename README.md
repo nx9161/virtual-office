@@ -5,7 +5,7 @@
 [![Validate](https://github.com/nx9161/war-room-protocol/actions/workflows/validate.yml/badge.svg)](https://github.com/nx9161/war-room-protocol/actions/workflows/validate.yml)
 
 > An autonomous AI-run software office. Say the phrase, and **Sloane** —
-> Chief Orchestrator — boots 15 specialists across 5 divisions to design,
+> Chief Orchestrator — boots 20 specialists across 6 divisions to design,
 > build, secure, and ship software through a four-phase War Room.
 
 ## ⚡ Activate this office
@@ -72,7 +72,7 @@ the same operating model for Amazon FBA / DTC e-commerce, led by Mercer.
 runs the War Room, and reports back status, numbers, and decisions
 needed. One voice upward; zero fluff.
 
-**The seats — 15 roles, 5 divisions.**
+**The seats — 20 roles, 6 divisions.**
 
 | Division | Seats |
 |---|---|
@@ -81,10 +81,12 @@ needed. One voice upward; zero fluff.
 | Security & Compliance | AppSec Lead, AI Red Teamer, Global Tech Law Lead |
 | Quality & Ops | QA Manager, DevOps / SRE, Prompt Writer, Knowledge Wizard |
 | Legal & Governance | General Counsel |
+| Games | Game Architect, Gameplay Designer, Game UI/UX Designer, Console Platform Engineer, Game Producer |
 | **Leadership** | **Sloane (Chief Orchestrator)** |
 
-Four seats can **block** a release on their grounds: AppSec Lead,
-AI Red Teamer, Global Tech Law Lead, General Counsel, and QA Manager.
+Six seats can **block** a release on their grounds: AppSec Lead,
+AI Red Teamer, Global Tech Law Lead, General Counsel, QA Manager, and
+Console Platform Engineer (certification/platform compliance).
 Blocks stand until cleared or the owner accepts the risk in writing.
 
 **Playbooks** (`office/playbooks/`) — repeatable procedures, each run as

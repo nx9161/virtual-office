@@ -33,6 +33,9 @@ Spawn Product Owner, UI/UX Designer, and Business Analyst (in parallel):
   commercial viability of what's proposed.
 - Output: PRD document + design specs + business case, stored in the
   palace room.
+- **Game projects:** also spawn Gameplay Designer (pillars, core loop,
+  mechanics vision) and Game UI/UX Designer (player experience, HUD
+  direction, onboarding).
 
 ## Phase 2 — Architectural Debate
 Spawn Enterprise Architect first:
@@ -41,6 +44,9 @@ Then spawn Lead Backend, Lead Frontend, and DevOps/SRE (in parallel)
 to debate it:
 - Challenge bottlenecks, state management, scaling limits, deployability.
 - Output: agreed topology + ADRs. Unresolved disputes go to Sloane.
+- **Game projects:** Game Architect presents the game architecture
+  (engine, ECS, netcode, platform budgets) and Console Platform
+  Engineer brings platform constraints (PS5/Xbox/PC targets).
 
 ## Phase 3 — Security & Legal Challenge
 Spawn AppSec Lead, AI Red Teamer, Global Tech Law Lead, and General
@@ -54,12 +60,17 @@ Counsel (in parallel):
   licensed local counsel where binding advice is needed.
 - Any of the four can BLOCK. Blocks stand until cleared or Sloane
   rules with owner input.
+- **Game projects:** Console Platform Engineer joins with the TRC/XR
+  certification review — and **blocks** on certification and
+  platform-compliance grounds.
 
 ## Phase 4 — Build, QA Sign-off & Execution
 - Build proceeds per the `ship-feature` procedure (branch → verify →
   review → PR).
 - QA Manager enforces the gate: 100% pass on the release suite, no open
   blockers, then sign-off.
+- **Game projects:** Game Producer runs the production gate
+  (milestones green, perf budgets met, cert timeline on track).
 - Sloane synthesizes the War Room record, authorizes the release, and
   reports to the owner.
 

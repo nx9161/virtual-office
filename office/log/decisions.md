@@ -100,3 +100,17 @@
   Honesty rule: repeated invocations with no new information get a
   recommendation, not theater.
 - **Owner:** Naman
+
+## 2026-10-07 — New Games division (5 seats)
+- **Context:** Owner wants game designers with deep game
+  architecture, UI, UX, and end-to-end game knowledge, targeting
+  Sony PlayStation, Xbox, and PC at industry standard.
+- **Decision:** Added a 6th division, Games, with 5 seats: Game
+  Architect (engine/systems/performance), Gameplay Designer
+  (mechanics/levels/balance), Game UI/UX Designer (HUD/menus/
+  onboarding/controller-first), Console Platform Engineer
+  (PS5 SDK/Xbox GDK, TRC/XR certification — blocking seat, SDK
+  material stays under NDA), Game Producer (milestones/playtests/
+  cert timeline/launch, owns production gates). War Room phases
+  extended for game projects.
+- **Owner:** Naman

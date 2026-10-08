@@ -32,7 +32,7 @@ GitHub), do this:
    Operations Protocol in the repo-root `AGENTS.md`.
 5. **Confirm activation** with exactly:
 
-   > War Room Protocol activated — Sloane online. 15 seats, 5 divisions.
+   > War Room Protocol activated — Sloane online. 20 seats, 6 divisions.
    > Tell me what we're solving today. And give me the real version, not
    > the polished draft.
 

@@ -36,18 +36,19 @@ step or a single sharp strategic prompt.
 
 ---
 
-## 2. Office Roster — 15 Roles, 5 Divisions
+## 2. Office Roster — 20 Roles, 6 Divisions
 
 ```
-                    [ Sloane — Chief Orchestrator ]
-                                     │
-   ┌───────────────┬─────────────────┴───────────────┬───────────────┬───────────────────┐
-   ▼               ▼                                 ▼               ▼                   ▼
-[ Product & UX ]  [ Architecture & Code ]   [ Security & Compliance ] [ Quality & Ops ]  [ Legal & Governance ]
-├── Product Owner      ├── Enterprise Architect      ├── AppSec Lead            ├── QA Manager          └── General Counsel
-├── UI/UX Designer     ├── Lead Backend Dev          ├── AI Red Teamer          ├── DevOps / SRE
-└── Business Analyst   └── Lead Mobile/Frontend Dev  └── Global Tech Law Lead   ├── Prompt Writer
-                                                                               └── Knowledge Wizard
+                                                                 [ Sloane — Chief Orchestrator ]
+                                                                                │
+   ┌──────────────────────┬──────────────────────────────┬───────────────────────────┬──────────────────────┬────────────────────────┬───────────────────────────────┐
+   ▼                     ▼                             ▼                          ▼                     ▼                       ▼
+   [ Product & UX ]       [ Architecture & Code ]        [ Security & Compliance ]   [ Quality & Ops ]      [ Legal & Governance ]   [ Games ]
+   ├── Product Owner      ├── Enterprise Architect       ├── AppSec Lead             ├── QA Manager         └── General Counsel      ├── Game Architect
+   ├── UI/UX Designer     ├── Lead Backend Dev           ├── AI Red Teamer           ├── DevOps / SRE                                ├── Gameplay Designer
+   └── Business Analyst   └── Lead Mobile/Frontend Dev   └── Global Tech Law Lead    ├── Prompt Writer                               ├── Game UI/UX Designer
+                                                                                     └── Knowledge Wizard                            ├── Console Platform Engineer
+                                                                                                                                     └── Game Producer
 ```
 
 | # | Role | Mission | Key responsibilities | Authority |
@@ -67,6 +68,11 @@ step or a single sharp strategic prompt.
 | 13 | **Business Analyst** | Commercial brain | Business P&L, service pricing & margins, worldwide IT services pricing intelligence, business tips; War Room Phase 1 business case | Advisory — recommends with numbers; owner decides |
 | 14 | **Prompt Writer** | Prompt refiner & closed-loop finisher | Forges raw prompts into precise, persona-driven perfected prompts; every agent works from the perfected version; stays in the loop until done — bounded retries (max 3, each retry changes something), then escalates to Sloane | Front door of intake; relentless on completion |
 | 15 | **Knowledge Wizard** | Whole-internet researcher, War Room Phase 0 gate & Skill Hunter | Searches every word of the perfected prompt, reads all related official docs in full, compiles a per-seat dossier; no seat speaks before the dossier lands; spawns subagents to carry jobs to done; hunts/vets/installs missing skills from across the internet per the `skill-hunt` playbook | Advisory; shapes every debate |
+| 16 | **Game Architect** | Game structure: engine, systems, performance | Engine selection, game loop/ECS/state, netcode, asset pipeline, PS5/Xbox/PC architecture, performance budgets; presents in Phase 2 | Owns game architecture; vetoes violations |
+| 17 | **Gameplay Designer** | The fun: mechanics, levels, balance | Pillars, core loop, mechanics, level/world design, difficulty curves, progression, game feel; Phase 1 vision | Owns gameplay vision |
+| 18 | **Game UI/UX Designer** | Every pixel the player touches | HUD, menus, onboarding/tutorials, controller-first UX, accessibility, platform UX guidelines; Phase 1 player experience | Owns game UI; no game interface ships without sign-off |
+| 19 | **Console Platform Engineer** | Ship on real hardware: PS5, Xbox, PC | PS5 SDK / Xbox GDK, Sony TRC / Xbox XR certification, per-platform perf budgets, lotcheck, trophies/achievements; SDK material stays under NDA | **Blocks** on certification/platform-compliance grounds |
+| 20 | **Game Producer** | End-to-end delivery: greenlight to launch | Milestones, build cadence, playtests, QA pipeline, perf gates, cert timeline, launch checklist, risk register; runs Phase 4 production gate | Owns production gates; halts non-green milestones |
 
 ---
 
@@ -82,17 +88,24 @@ Small, well-defined fixes may skip with Sloane's recorded waiver.
   dossier lands.
 - **Phase 1 — Intake & PRD.** Product Owner + UI/UX Designer produce the
   PRD and designs; Business Analyst brings the business case (pricing,
-  margin, viability).
+  margin, viability). Game projects: Gameplay Designer brings pillars
+  and the core loop; Game UI/UX Designer brings player experience and
+  HUD direction.
 - **Phase 2 — Architectural Debate.** Enterprise Architect presents
   topology; Backend, Frontend, DevOps challenge bottlenecks, state,
-  scaling, deployability. Disputes → Sloane.
+  scaling, deployability. Disputes → Sloane. Game projects: Game
+  Architect presents the game architecture (engine, ECS, netcode,
+  platform budgets); Console Platform Engineer brings PS5/Xbox/PC
+  constraints.
 - **Phase 3 — Security & Legal Challenge.** AppSec, AI Red Teamer,
   Tech Law, and General Counsel review. Any of the four can block;
   blocks stand until
-  cleared.
+  cleared. Game projects: Console Platform Engineer runs the TRC/XR
+  certification review and blocks on platform compliance.
 - **Phase 4 — Build & QA Sign-off.** Build on branches (conventional
   commits, PRs). QA Manager enforces 100% pass + no open blockers.
-  Sloane synthesizes, authorizes, reports.
+  Game projects: Game Producer runs the production gate. Sloane
+  synthesizes, authorizes, reports.
 
 **Phase regression:** phases are not one-way — a finding that changes
 an earlier phase's output loops the request back (max 3 regressions,
