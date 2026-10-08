@@ -476,3 +476,20 @@
   enemy/hazard/stage taxonomy wholly original; no copied brawler archetypes,
   stage compositions, or UI layouts.
 - Repo shall be nx9161/stallbreaker. Batch 2 gates: 4-for-4 PASS.
+
+## ADR-2026-10-08-AS-27: Standing order — run the full pipeline without stopping
+- 2026-10-08: owner issued standing directive "Don't ever stop" — the
+  arcade-suite pipeline runs continuously through all batches without
+  waiting for per-batch approval. This supersedes the earlier "Batch 3
+  starts when you say go" checkpoint.
+- Batch discipline still holds (sequential batches, learn between them;
+  no all-36-at-once), but batches now chain automatically: gates ->
+  builds -> QA -> deploy -> next batch's gates.
+- Batch order: Batch 2 (STALLBREAKER, BRIARLINE, FOGCHART, BURROWLIGHT —
+  in flight) -> Batch 3 (isometric hopper, aerial/flappy combat,
+  time-management, dungeon crawler, city smasher) -> Batch 4 (weapons
+  fighter, platform climber, obstacle course, physics roller, masocore
+  platformer).
+- Standing hard boundaries unchanged: no spend, no Ko-fi/monetization
+  without licensed-counsel review, hub cutover stays owner-deferred,
+  formal TESS searches pre-monetization.
