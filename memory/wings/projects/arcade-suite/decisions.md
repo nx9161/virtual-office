@@ -884,3 +884,28 @@
   shove VFX in real time, takedown achievability, 45s median, punch/shove
   feel) then G-5 accept + G-6 ship. No further retune without Chief
   escalation.
+
+## ADR-2026-10-08-AS-50: G-5/G-6 — owner SHIPS the fix run (Track A + Track B complete)
+- 2026-10-08 (~02:30 EDT): Owner said "Ship it." G-5 human playtest gate
+  WAIVED by owner (his call); G-6 SHIP declared. The fix run is complete.
+- Track A (template pause defect): v1.0.2 tagged on b7191c7; all 8 titles
+  deployed byte-identical; tidelantern double-fire fixed; FOGCHART title
+  advance + blur-pause covered; G-4 signed (AS-46).
+- Track B (STALLBREAKER retune): 3 passes consumed within bound. Pass 1
+  built the spec; pass 2 fixed shove verifiability + Ember pacing; pass 3
+  proved the shove-lethality alarm was a data-reading error (throw deals
+  zero damage; the designed shove->stall->takedown loop verified working).
+  Live build: b74005c, byte-identical. Design vindicated; no further
+  retune without Chief escalation.
+- Root-cause wins this run: (1) Vercel "Blocked" = Hobby commit-author
+  attribution, fixed by standardizing clone identity to the recognized
+  noreply address; (2) pass-1 travel math wrong (~100px actual vs 180-220px
+  claimed); (3) tester miscounts read as design flaws twice — forensic
+  scoring math settled both.
+- Open follow-ups (v1.0.3 train, NOT blockers): blur-pause signaling
+  (8f74b0b) is template-only — propagate to games; 'over'-state keyboard
+  mapping spec is locked in design/; BURROWLIGHT Lv1->Lv3 informational
+  (not by design — instrument during regression).
+- Standing rules added this run: every future game gets its own War Room
+  before build (owner order, 2026-10-08); no title ships until fun-verified
+  in a real browser.
