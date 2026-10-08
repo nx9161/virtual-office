@@ -864,3 +864,23 @@
   humans). Owner asked to play 2–3 Ember runs and report: shove VFX
   unmistakable? takedown achievable? median survival? shove vs punch
   balance feel? Pass 3 (final bound) or G-5/G-6 ship follows his report.
+
+## ADR-2026-10-08-AS-49: Retune pass 3 — shove lethality alarm was a data-reading error; NO change (3-pass bound exhausted)
+- 2026-10-08 (~02:26 EDT): Exhaustive kill-path inventory of
+  stallbreaker/src/game.js: punch is the ONLY direct-damage source
+  (doPunch: th.hp -= 1; killThug on 0 — +10 pts, +4% reclaim); takedowns
+  happen ONLY on stall impact (shoved state: stall trigger -> killThug,
+  combo+1, 50+combo*10 pts, +12% reclaim, full feedback stack); doShove
+  never touches th.hp (grep: only line 142 writes it; only lines 147, 532
+  call killThug). Thrown thugs missing all stalls return to chase unharmed.
+- Forensic check: run 12's "K-spam killed ~6 thugs (60 pts, +12% cart)" is
+  EXACTLY one combo-1 takedown (50+1*10=60, +12%) — not six punch-KOs
+  (would read 60 pts / +24%). The "~6 thugs" was the turn-based tester's
+  miscount. The shove's only payoff was a stall takedown — the designed
+  loop, working as signed (AS-42/AS-44). Decision: no balance change;
+  changing it would break the signed spec. Pass 3 commit 7b26411 is
+  docs-only (TUNING.md); live build unchanged from pass 2.
+- 3-pass bound EXHAUSTED. Remaining: G-5 human gate (owner's playtest:
+  shove VFX in real time, takedown achievability, 45s median, punch/shove
+  feel) then G-5 accept + G-6 ship. No further retune without Chief
+  escalation.
