@@ -565,3 +565,20 @@
   release-check all-green; forbidden grep clean (no antecedent weapon/
   military vocabulary); terser 5.51.2, 53,016 -> 28,982 B.
 - Live-browser QA outstanding (delegated).
+
+## ADR-2026-10-08-AS-32: Quality crisis — Game Feel overhaul program
+- 2026-10-08: owner verdict — the 8 suite titles "dont even have a good
+  game play", GLOAM "was good". Assessment: builders implemented specs;
+  nobody tuned feel. GLOAM was iterated (keyboard steering, difficulty
+  select, play-testing); suite titles got checklists. Known failure modes
+  from QA: STALLBREAKER untriggerable shove / 6-17s Ember deaths / no
+  health feedback / Space-Enter pause bug; SEEDRIFT dead combo (fixed);
+  REEDLIGHT invisible telegraph (fixed); general brutal difficulty curves.
+- Program: (1) Game Feel war room (PO + UI/UX) defines the GLOAM bar as a
+  concrete per-title checklist; (2) all 8 deployed suite titles get
+  feel-overhaul builds (tuning, juice, feedback, readability) WITHOUT
+  touching cleared IP — names, trade-dress, load-bearing mechanics and
+  binding commitments are frozen; (3) browser QA re-verification per title.
+- GLOAM is explicitly excluded — untouched.
+- Batch 3 gates run in parallel; Batch 3 builds get the feel bar baked in
+  from day one. Standing "don't ever stop" order continues.
