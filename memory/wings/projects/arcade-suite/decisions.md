@@ -696,3 +696,59 @@
   agent (BRIARLINE browser QA play-through) was interrupted and closed. No
   other work was in flight. Pipeline is fully halted; nothing new will
   start without the owner's explicit direction.
+
+## ADR-2026-10-08-AS-42: War Room fix run verdict — CONDITIONAL GO (Track A pause + Track B STALLBREAKER)
+- 2026-10-08 (~22:15 EDT): Full war room convened on owner's "Fix after
+  discussion in war room" (Prompt Writer perfected the prompt; echo given).
+  Seats: Gameplay Designer, Game UI/UX Designer, Lead Frontend, QA Manager,
+  Game Producer. Phase 0 briefing verified against template repo and ADRs.
+  No code written, nothing merged in this phase.
+- KEY FINDING: **Vercel deploy pipeline broken.** Cherry-picked v1.0.2
+  shared.js was pushed to ALL 8 game repos (byte-identical except NS slug),
+  but served https://stallbreaker-nx9161s-projects.vercel.app/game.min.js
+  lacks the v1.0.2 keydown literals — Vercel did not auto-deploy. Human
+  escalation: owner must diagnose/fix the pipeline + give production-deploy
+  approval. Nothing deploy-dependent moves until that clears.
+- Track A (converged): v1.0.2 approach approved (commit b7191c7 in
+  nx9161/arcade-template, pushed, NOT yet tagged); tidelantern double-fire
+  regression (its per-game Space/Enter router skips two overlays) fix-forward
+  IN Track A scope — narrow its router to the ov-over->btnRestart clause;
+  beamtide/seedrift/reedlight routers benign; briarline has none. Regression
+  checklist upgraded: exactly-one-transition-per-keypress on every overlay.
+  Deploy verification = byte-compare served /game.min.js vs repo blob at
+  cherry-pick SHA (heuristic: `".matches("` present; never grep mangled
+  names). Tag v1.0.2 ONLY after per-title G-1 deploy confirmation. Blur-pause
+  gets `audio.sfx('pause')` + TEMPLATE.md doc in-train, no version bump.
+  'Over'-state keyboard mapping -> v1.0.3 (UI/UX locks spec before Track A
+  sign-off). Keyboard contract: game-local handlers may not bind
+  Space/Enter on overlay states; repeat-guard required.
+- Track B (converged): STALLBREAKER retune — Ember: windup telegraph
+  0.65->0.75s + 90ms pre-hit commit flash, knockback 260->140px/s, invuln
+  1.2s w/ blink, spawnEvery 3.2->4.5s, first spawn +2.5s delay. Shove/
+  takedown: flight 0.5->0.9s, 470->420px/s, decel pow(0.001)->pow(0.02) dt
+  (~180-220px travel), 25-degree aim-assist cone, stall trigger r+24,
+  cooldown 7->4s, no silent mid-run reshuffles, takedown feedback stack
+  (hit-stop + shake + 2x lingering pop + first-takedown tutorial). Hearts:
+  top-right (suite-wide GLOAM consistency), 2x scale min, white-stroke
+  fill, damage pulse + "GRIT -1" edge-flash. Calm: "CALM — practice, no
+  damage", ambient pedestrians, stall glow, SAFE-tagged hearts, persistent
+  CALM chip. Gameplay writes the one-pager (incl. intended Ember median
+  survival) before retune pass 1; retune bounded at 3 passes.
+- Execution order: 1) human escalation (Vercel), 2) parallel repo-side work
+  (tidelantern fix, sfx+doc, design locks, hearts spec), 3) deploy all 8
+  (owner approval), 4) G-1 byte verify, 5) tag v1.0.2, 6) G-4 Track A
+  sign-off, 7) Track B merges + redeploy, 8) human QA, 9) G-5 accept,
+  10) G-6 ship (owner approval).
+- Unresolved dissent recorded: (1) QA holds 10 human runs as block
+  criterion vs Producer's min-3 (Gameplay's merge compatible with either).
+  (2) Pause-reason on-screen text: UI/UX + QA hold it as Track A closure;
+  Producer ruled v1.0.3. Sloane ruling (2026-10-08): adopt UI/UX's minimal
+  form — one secondary line at the autoPause() call site, no architecture,
+  no version bump — in-train; it unblocks two seats' sign-off at ~zero cost.
+  If owner upholds Producer's ruling, UI/UX's and QA's dissent stands as
+  recorded blocks on FOGCHART sign-off.
+- Informational: BURROWLIGHT Lv1->Lv3 is NOT by design (level++ exactly
+  once per levelClearCheck, line 266); QA to instrument during regression,
+  no change this round.
+- Standing constraints honored: GLOAM untouched; no title ships until
+  fun-verified in a real browser; scope held to the two tracks.
