@@ -582,3 +582,14 @@
 - GLOAM is explicitly excluded — untouched.
 - Batch 3 gates run in parallel; Batch 3 builds get the feel bar baked in
   from day one. Standing "don't ever stop" order continues.
+
+## ADR-2026-10-08-AS-33: FOGCHART browser QA 11/12 (Space/Enter gaps)
+- 2026-10-08: live Chromium play-through — 11 PASS, 1 FAIL. Charting,
+  re-fog tug-of-war, gloomwisp hunts, storm-clock expiry, Calm endless all
+  verified; charting pace + re-fog pressure feel fair on Ember.
+- FAIL: Space/Enter do NOT resume from pause (only P/Esc/button) — same bug
+  class as STALLBREAKER. Also Space/Enter don't advance the title screen.
+  One unexplained pause event observed (possibly blur-related — verify
+  pause-on-blur is intentional and signaled).
+- Findings forwarded to the Game Feel overhaul coordinator for the FOGCHART
+  builder.
