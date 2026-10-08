@@ -783,3 +783,25 @@
 - Track B is now DESIGN-COMPLETE. Retune pass 1 may begin at repo level
   once the owner's Vercel pipeline repair + production-deploy approval
   land. No code written yet; DO NOT IMPLEMENT discipline held throughout.
+
+## ADR-2026-10-08-AS-45: Vercel "Blocked" root cause found — commit-author attribution (Hobby private repos)
+- 2026-10-08 (~00:50 EDT): Dashboard investigation (owner signed in via
+  takeover; read-only, no changes) found all 7 cherry-pick deployments were
+  auto-created but sit in Vercel's "Blocked" state — Hobby-plan
+  private-repo commit-attribution block. The cherry-pick commits are
+  authored `nx9161 <naman@maxtechlife.me>`, which Vercel cannot attribute
+  to the Hobby team owner, so they never built. Tidelantern's later fix
+  commit (`Sloane (War Room) <nx9161@users.noreply.github.com>`) deployed
+  READY — the noreply.github.com identity is recognized. Not a Git
+  misconfiguration, not a failed build.
+- Durable fix applied: git user.name/user.email set to
+  `nx9161 <nx9161@users.noreply.github.com>` in ALL local clones
+  (8 games + arcade-template) so future commits attribute correctly.
+- Recovery prepared (NOT pushed): one author-corrected empty retrigger
+  commit per repo on top of main (beamtide 8a47d05, reedlight 382656c,
+  seedrift dfb1b58, stallbreaker 9b8a027, briarline 9c6d834, fogchart
+  aa0dc12, burrowlight 8f29dc4). Pushing fires production auto-deploys —
+  awaiting owner's explicit production-deploy approval per house rules.
+- G-1 byte-verify spec updated: compare served /game.min.js against the
+  repo blob at these new commit SHAs (content unchanged from the
+  cherry-picks).
