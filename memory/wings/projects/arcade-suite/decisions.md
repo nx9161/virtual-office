@@ -822,3 +822,23 @@
   tidelantern double-fire fixed, FOGCHART title advance + blur-pause
   covered, regression checklist green. Sloane signs Track A complete.
   Track B (STALLBREAKER retune pass 1) authorized to begin.
+
+## ADR-2026-10-08-AS-47: Retune pass 1 FAILED acceptance — shove still non-functional (pass 2 dispatched)
+- 2026-10-08 (~01:03 EDT): Live-browser QA of retune pass 1 (5af3602,
+  deployed byte-identical): 11 full Ember runs. Median survival 14s
+  (best 19s) vs 45s acceptance target — NOT met. Shove (K) produced NO
+  visible effect in ~15 presses incl. point-blank attempts — the core
+  loop (shove thugs into stalls for takedowns) is non-functional; no
+  TAKEDOWN ever observed; COMBO stuck at 0 even with landed punches.
+  PASS: hearts (large, readable), wind-up telegraphs, pause/resume
+  (P/Esc/Space/Enter/button), Calm mode (reads as intentional peaceful
+  market). QA verdict: not fun/fair on Ember yet. (Caveat: tester is
+  turn-based and slower than a real human — survival times are a lower
+  bound; but point-blank K presses should have produced something.)
+- Pass 2 dispatched within the 3-pass bound: diagnose the K-key path
+  root cause in src/game.js first (wiring vs trigger condition vs
+  velocity override), then fix + soften Ember contact-damage pacing
+  (~1 heart per 2-3s of contact is too fast for "gentle") + resolve the
+  COMBO-at-0 question (fix if it should increment on hits; document if
+  takedown-only by design). Lantern/Wildfire rows unchanged. Hearts,
+  telegraphs, pause, Calm untouched.
