@@ -648,3 +648,17 @@
   night-gaslight art.
 - Repo shall be nx9161/lanternrail. "lamplight"/"mothglow" barred from all
   materials. Gates now 9 total: 6 kills (+3 replacement kills), 8 survivors.
+
+## ADR-2026-10-08-AS-38: CROAKSCALE clears Batch 3 gate (SPORESONG killed)
+- 2026-10-08: Batch 3 gate (isometric hopper). "SPORESONG" KILLED: reproduces
+  the entire famous SPORE mark (EA/Maxis, Steam, ~37K reviews) as its leading
+  element in the identical goods class — stronger than the HAILSEED
+  precedent. Selected: CROAKSCALE (croak + musical scale — fictionally
+  native to the melody mechanic; zero collisions). DRUMCAP parked as
+  fallback. Dual-signed CONDITIONAL PASS.
+- Locked design: tree frog hops pyramid of drum-mushrooms; PYRAMID IS AN
+  INSTRUMENT (hops sound notes + tint caps; row completion composes
+  melodies; dissonant hops summon the dissonance crow); melody-completion
+  scoring; perfect-song prestige runs.
+- Repo shall be nx9161/croakscale. "sporesong" barred from all materials.
+  Gates now 10 total: 7 kills, 9 survivors.
