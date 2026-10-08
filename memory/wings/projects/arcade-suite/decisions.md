@@ -633,3 +633,18 @@
   (falling townsfolk caught for bonuses, never rewarded for harm);
   watercolor storm-sky + paper-tear percussion.
 - Repo shall be nx9161/stormbreak. Gates now 8 total: 5 kills, 7 survivors.
+
+## ADR-2026-10-08-AS-37: LANTERNRAIL clears Batch 3 gate (LAMPLIGHT killed)
+- 2026-10-08: Batch 3 gate (time-management). "LAMPLIGHT" KILLED: two
+  identical-mark active games (Goldshoe Games roguelike on itch.io; 3D
+  puzzle platformer on Steam app 3011380) + "Lamplight City" leading
+  element. Replacement MOTHGLOW also KILLED: MothGlow Games active indie
+  studio (MARSHLIGHT precedent). Selected: LANTERNRAIL — zero game uses,
+  fictionally native (the promenade rail). Dual-signed CONDITIONAL PASS.
+- Locked design: lamplighter slides lanterns down promenade rail to moth
+  patrons; MOTHS DRINK THE LIGHT (served lanterns dim; refuel revisits
+  are the core loop; serve-and-forget impossible by design); streak
+  scoring ("twenty tables, zero dark"); original moth/lamplighter designs;
+  night-gaslight art.
+- Repo shall be nx9161/lanternrail. "lamplight"/"mothglow" barred from all
+  materials. Gates now 9 total: 6 kills (+3 replacement kills), 8 survivors.
