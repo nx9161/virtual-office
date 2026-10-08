@@ -690,3 +690,9 @@
   resume bug is TEMPLATE-level (shared.js), confirmed on 3 titles
   (STALLBREAKER, FOGCHART, BURROWLIGHT); STALLBREAKER browser QA human-feel
   failures; FOGCHART 11/12; BURROWLIGHT 10/11.
+
+## ADR-2026-10-08-AS-41: Full stop on owner's order
+- 2026-10-08: owner issued "Stop everything you're doing". The last running
+  agent (BRIARLINE browser QA play-through) was interrupted and closed. No
+  other work was in flight. Pipeline is fully halted; nothing new will
+  start without the owner's explicit direction.
