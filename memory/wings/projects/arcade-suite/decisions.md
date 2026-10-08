@@ -771,3 +771,15 @@
   pass 1 may then begin at repo level. Design sign-off covers design only;
   Vercel pipeline repair + production-deploy approval remain the owner's
   separate human gates.
+
+## ADR-2026-10-08-AS-44: STALLBREAKER retune one-pager SIGNED (Rev 2, design lock complete)
+- 2026-10-08 (~22:23 EDT): Gameplay submitted Rev 2 addressing all six
+  AS-43 revisions (commit 4f1b5a9). Game Producer re-reviewed and SIGNED:
+  Ember median survival locked at 45s (beats 6-17s floor ~3x); converged
+  takedown feedback stack fully specified (hit-stop 120ms, shake 6px/200ms,
+  2x pop 900ms dwell, one-time first-takedown tutorial); stall glow in Calm;
+  full shove-deceleration change with intended travel; "2x scale minimum"
+  hearts; 3-pass retune bound + escalation path stated verbatim.
+- Track B is now DESIGN-COMPLETE. Retune pass 1 may begin at repo level
+  once the owner's Vercel pipeline repair + production-deploy approval
+  land. No code written yet; DO NOT IMPLEMENT discipline held throughout.
