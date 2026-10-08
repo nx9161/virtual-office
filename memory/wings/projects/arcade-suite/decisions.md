@@ -842,3 +842,25 @@
   COMBO-at-0 question (fix if it should increment on hits; document if
   takedown-only by design). Lantern/Wildfire rows unchanged. Hearts,
   telegraphs, pause, Calm untouched.
+
+## ADR-2026-10-08-AS-48: Retune pass 2 playtest — shove works, human verification needed (G-5 gate)
+- 2026-10-08 (~01:21 EDT): Live-browser QA of pass 2 (b74005c, deployed
+  byte-identical): 13 full Ember runs. Shove (K) is FUNCTIONAL and lethal —
+  K-spam killed ~6 thugs (score 60) in the best run (26s); the throw's
+  IMPACT is unmistakable. The added VFX (flash/ring/"SHOVE!" pop/particles/
+  shake) were NOT observed in captures, but the tester's screenshots lag
+  ~350ms behind keypresses, so brief effects may simply be missed — a
+  real-time human check is needed. Median survival 15s is a strict lower
+  bound (tester is turn-based, far slower than a human) — says nothing
+  reliable about the 45s target. Takedowns NOT confirmed (positioning a
+  thug between player and stall is beyond turn-based reactions). Ember
+  back-off mechanic present and plausible; fairness at human speed
+  unverified. PASS: hearts, telegraphs, hit feedback, all pause/resume
+  paths. NOTE: Space/Enter don't restart from run-over ("Play again" click
+  required) — this is the v1.0.3-deferred 'over'-state mapping, not a
+  regression. OPEN BALANCE QUESTION: K-spam may be overpowered vs punch
+  (dominant strategy) — needs human judgment.
+- G-5 human gate: the room's critical path requires human QA runs (2
+  humans). Owner asked to play 2–3 Ember runs and report: shove VFX
+  unmistakable? takedown achievable? median survival? shove vs punch
+  balance feel? Pass 3 (final bound) or G-5/G-6 ship follows his report.
