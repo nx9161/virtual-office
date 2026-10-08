@@ -510,3 +510,22 @@
   shove-into-stall: combo 0->1); release-check all-green; forbidden grep
   clean; terser 5.51.2, 30,098 -> 17,356 B.
 - Live-browser QA outstanding (delegated).
+
+## ADR-2026-10-08-AS-29: BURROWLIGHT shipped to production (Batch 2 #4)
+- 2026-10-08: nx9161/burrowlight @ f806780 built from template v1.0.1,
+  deployed to https://burrowlight-nx9161s-projects.vercel.app (Vercel
+  project prj_Agq3anzdsbHPqmjXaJsbR5WpoltE, main, auto-deploy).
+- Design: grid digger (12x18, interpolated movement); glow-worm floods
+  tunnels with sap: BFS flood -> sap phase (2.0-2.4s, mites drown,
+  100xcombo) -> crack phase (1.0-1.4s, "COLLAPSE — MOVE!") -> rock
+  (permanent, impassable). Caught in collapse = lose life + relocate.
+  Mite quota per level (clear all -> regenerated garden, +2 mites/level,
+  mites speed up); one-flood clear = +500 "ONE-ROUTE CLEAR" prestige; mite
+  bites cost a life (3 lives, bite kills the mite too); spawn warnings;
+  Calm = endless drift (+1/cell, skips difficulty).
+- Verification: 24/24 headless (real game.min.js); materiality proof —
+  scripted flood produced 8 rock cells, worm never re-entered (one-way
+  commitment mechanically real); 2 real bugs found+fixed in QA (mite spawn
+  area too small; Calm counters not zeroed); release-check 12/12;
+  forbidden greps clean; terser 5.51.2, 32,390 -> 15,772 B.
+- Live-browser QA outstanding (delegated).
