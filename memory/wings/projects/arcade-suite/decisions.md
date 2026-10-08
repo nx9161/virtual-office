@@ -548,3 +548,20 @@
   all-green; forbidden grep clean (no ship/space/power-up vocabulary);
   terser 5.51.2, 31,517 -> 16,753 B.
 - Live-browser QA outstanding (delegated).
+
+## ADR-2026-10-08-AS-31: BRIARLINE shipped to production (Batch 2 #2)
+- 2026-10-08: nx9161/briarline @ 4671ed3 built from template v1.0.1,
+  deployed to https://briarline-nx9161s-projects.vercel.app (Vercel project
+  prj_OClOwb9EBjsN80TRoiVexV8d6bKm, main, auto-deploy).
+- Design: landscape run-and-gun (720x480); hedgerow warden; 3 stages x 6
+  rooms (5 archetypes + boss room); 4 original foe types; 3 original
+  botanical bosses (Gnarlmaw, Sporechoir, Briarheart); PLANT YOUR ARSENAL —
+  5 seed tiers (Dawnpetal->Bloomflare), grove gates auto-sow, grown tier
+  never downgrades, death keeps grown arsenal (unsown pouch scattered).
+  Restructured to 3 lives x 3 bark pips after QA exposed pips-as-health
+  never triggered death (the next-life mechanic never fired) — dying
+  deliberately after sowing is now a real strategic tool.
+- Verification: 21/21 headless (real game.min.js, ?debug-gated Game.qa);
+  release-check all-green; forbidden grep clean (no antecedent weapon/
+  military vocabulary); terser 5.51.2, 53,016 -> 28,982 B.
+- Live-browser QA outstanding (delegated).
