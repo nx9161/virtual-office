@@ -422,3 +422,17 @@
   monetized step (non-waivable); formal TESS searches per title pre-monetization.
 - Batch 2 (brawler, run-and-gun, vertical shooter, digger) awaits owner's word
   per the quality/revenue learning gate.
+
+## ADR-2026-10-08-AS-23: BURROWLIGHT clears Batch 2 gate (title survives)
+- 2026-10-08: fourth Batch 2 gate (digger). "BURROWLIGHT" SURVIVES — no game
+  title/app/Steam/itch.io collision on any venue. Nearest neighbor "Winter
+  Burrow" (Pine Creek/Noodlecake cozy survival, 2025) assessed low-risk:
+  different overall impression, different genre, only generic "burrow"
+  shared. Dual-signed CONDITIONAL PASS.
+- Locked design: glow-worm, sap-flooding drowns root-mites; FLOODED TUNNELS
+  COLLAPSE (impassable, must alter routing materially — not cosmetic);
+  root-mites wholly original, no inflation mechanics, no borrowed
+  level-chunk structures; dark-soil/bioluminescent-sap art; light-as-route
+  visual language.
+- Repo shall be nx9161/burrowlight. Gates now 5 total: 4 kills, 2 survivors
+  (BURROWLIGHT + STALLBREAKER screen-pass pending formal record).
