@@ -529,3 +529,22 @@
   area too small; Calm counters not zeroed); release-check 12/12;
   forbidden greps clean; terser 5.51.2, 32,390 -> 15,772 B.
 - Live-browser QA outstanding (delegated).
+
+## ADR-2026-10-08-AS-30: FOGCHART shipped to production (Batch 2 #3)
+- 2026-10-08: nx9161/fogchart @ 01995d8 built from template v1.0.1,
+  deployed to https://fogchart-nx9161s-projects.vercel.app (Vercel project
+  prj_bTkv3bUYJf73etVZJAI8NPpYEv1L, main, auto-deploy).
+- Design: swift cartographer; THE MAP IS THE SCORE — 12x18 tile chart,
+  tiles uncover in light radius (~0.35-0.45s), +10/tile, combo on streaks;
+  WIN = 100% charted simultaneously; mistwisps seek charted tiles and
+  RE-FOG them (combo reset); swift's chart-light dissipates mistwisps
+  (no player projectile — one-verb law); gloomwisps (lantern/wildfire)
+  hunt the swift, light-immune, 3 tailfeather pips, 1.6s invuln; fail =
+  3 strikes or storm clock (240/200/170s); Calm = endless, no wisps/clock.
+  Watercolor storm-sky + parchment tiles; feathered swift (no jet).
+- Verification: 26/26 headless (real game.min.js); win branch verified —
+  one harness run WON naturally at 216/216 (prestige reachable), a dumber
+  seed lost 213/216 at the clock (healthy variance); release-check
+  all-green; forbidden grep clean (no ship/space/power-up vocabulary);
+  terser 5.51.2, 31,517 -> 16,753 B.
+- Live-browser QA outstanding (delegated).
