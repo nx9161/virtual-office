@@ -909,3 +909,41 @@
 - Standing rules added this run: every future game gets its own War Room
   before build (owner order, 2026-10-08); no title ships until fun-verified
   in a real browser.
+
+## 2026-10-08 — Owner quality verdict: full suite redesign (all 8, GLOAM exempt)
+- Owner verdict, blunt: GLOAM is perfect; the other eight are a bad job — some don't work properly, some aren't interesting enough. Verdict is ground truth on fun.
+- Response plan (two tracks):
+  1. **Audit** (running): 4 parallel real-browser playtest audits, 2 games each — defects vs. fun-gaps per game, verdict KEEP/FIX/REDESIGN.
+  2. **War Room**: extract what makes GLOAM perfect as design principles; sign per-game redesign directions. Redesign = the GLOAM treatment (stronger fantasy/hook/feel), NOT tuning passes.
+  3. **Rebuild** per game; owner playtests each as the ship gate (no repeat of the STALLBREAKER waiver — he shipped it without playing).
+- Standing rule interaction: redesigns of existing games go through the War Room in the spirit of the every-new-game rule.
+
+## 2026-10-08 — Playtest audit results (4 parallel browser audits, all 8 games)
+Verdicts: 2 KEEP (polish), 6 FIX, 0 full REDESIGN. The "boring" verdict was mostly brokenness — all salvageable with specific fixes.
+- BEAMTIDE: KEEP. Works, fun non-violent catch loop. Polish: explain life diamonds (missed bird = lost life).
+- FOGCHART: KEEP. Charming charting; wisps decorative on Ember, re-shroud invisible, combo decay unexplained. Balance fixes.
+- TIDELANTERN: FIX critical — jellyfish ignores all movement input; every run is a guaranteed timeout loss. Unplayable.
+- BRIARLINE: FIX critical — jump broken (Space/W/Up do nothing); room-3 SOW gate soft-locks progression; damage/death unexplained.
+- BURROWLIGHT: FIX — on-screen FLOOD button dead AND corrupts keyboard flooding after click; mite touch-death unexplained; level counter erratic (Lv1→Lv3); flood range undocumented.
+- STALLBREAKER: FIX — Ember overtuned (11–18s runs), facing requirement for punch/shove never explained, enemies spawn on player, stall takedowns never occur in normal play.
+- REEDLIGHT: FIX — dark-blob hazards read as decoration (deaths feel random), mote pickup radius tiny, fuel pressure absent on Ember.
+- SEEDRIFT: FIX (near REDESIGN) — steering too weak vs gusts (inputs often net-opposed), mouse drag non-functional despite being advertised, 100-mile goal takes ~40 min at observed pace.
+- GLOAM calibration (all agents): the bar = immediate authoritative movement, generous pickups, legible threats, poetic copy, persistent best score.
+Next: 4-track parallel fix run (A: TIDELANTERN+BRIARLINE, B: BURROWLIGHT+REEDLIGHT, C: STALLBREAKER+SEEDRIFT, D: BEAMTIDE+FOGCHART polish), then owner playtest as ship gate.
+
+## 2026-10-08 — Difficulty scaling pass (owner directive)
+- Owner: "the speed is the same for all three mode, make it crazy difficult for the fastest mode, also not that difficult that i cant do anything about that."
+- Design principle adopted: difficulties must differ in threat SPEED (felt identical). Wildfire = crazy but fair: scale threats never the player; telegraphs ≥0.45s reactable; no spawn-on-player/unavoidable damage; player always has a legal response.
+- 2 parallel tuning tracks: Group 1 (BEAMTIDE, TIDELANTERN, REEDLIGHT, SEEDRIFT), Group 2 (STALLBREAKER, BRIARLINE, FOGCHART, BURROWLIGHT). Ember stays approachable; Lantern ~1.3-1.5x; Wildfire ~1.7-2.2x. GLOAM untouched.
+
+## 2026-10-08 — Difficulty tuning landed (all 8)
+- Group 1 (BEAMTIDE, TIDELANTERN, REEDLIGHT, SEEDRIFT) + Group 2 (STALLBREAKER, BRIARLINE, FOGCHART, BURROWLIGHT): all pushed, Vercel-deployed, live byte-verified.
+- Ember preserved as baseline everywhere; Lantern ~1.3-1.5x threat speed; Wildfire ~1.7-2.2x + denser spawns. No player values reduced; telegraphs ≥0.45-0.5s; no spawn-on-player.
+- Notable: BRIARLINE was the worst offender (1.0x/1.11x/1.39x — felt identical); SEEDRIFT hail speed wasn't scaled at all before. STALLBREAKER uses ember/lantern/wildfire (not Ember/Sizzle/Inferno — earlier brief was wrong).
+- Fix run closed: Tracks A-D + Enter-restart guard (all 8 games) + difficulty pass. Pending: live-browser tiebreaker on TIDELANTERN movement + BRIARLINE jump, then owner playtest as ship gate.
+
+## 2026-10-08 — Fix run + difficulty pass shipped; owner playtest is the gate
+- All 8 games: audit fixes + Enter-restart guard + difficulty scaling (Ember baseline / Lantern ~1.4x / Wildfire ~2x, fair) — all pushed, Vercel-deployed, live byte-verified. GLOAM untouched.
+- Verification limits (honest): the browser automation tooling issues instantaneous key presses only — it cannot hold keys down, so it cannot test hold-to-move mechanics. Two "failures" (TIDELANTERN swim, BRIARLINE jump) are CONTESTED: code paths verified sound by direct read + synthetic harness positive, but real-browser proof impossible with available tooling. The JS-injection tiebreaker was blocked (no page-JS execution in the browser tool); local headless Chrome has no network.
+- Two items flagged for the owner's hands specifically: (1) TIDELANTERN — hold an arrow key, confirm the jelly swims; (2) BRIARLINE — Space/W/Up jump, gates open room to room.
+- Owner asked to playtest each game before anything counts as shipped — no waivers this time.

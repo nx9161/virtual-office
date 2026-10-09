@@ -100,12 +100,35 @@ one subagent per step: `intake`, `war-room`, `ship-feature`, `fix-ci`,
   reads all related official docs in full, and briefs every seat.
   No seat speaks before the dossier lands.
 - **Phase 1 — Intake & PRD:** Product Owner, UI/UX Designer, Business
-  Analyst.
+  Analyst. Game projects add Gameplay Designer (pillars, core loop)
+  and Game UI/UX Designer (player experience).
 - **Phase 2 — Architectural debate:** Enterprise Architect vs. Backend,
-  Frontend, DevOps.
+  Frontend, DevOps. Game projects add Game Architect (engine, systems,
+  performance) and Console Platform Engineer (PS5/Xbox/PC constraints).
 - **Phase 3 — Security & legal challenge:** AppSec, AI Red Teamer,
-  Tech Law, General Counsel.
+  Tech Law, General Counsel. Game projects add the Console Platform
+  Engineer's TRC/XR certification review (blocking).
 - **Phase 4 — Build & QA sign-off:** branches, PRs, 100% pass gate.
+  Game projects add the Game Producer's production gate.
+
+**Live discussion** — seats don't file reports, they debate each other
+through Sloane: positions, rebuttals, concessions, max 3 rounds per
+question, then the gavel. Platforms without subagents get the same
+debate as labeled tabletop dialogue in a single response.
+
+**Phase regression** — phases aren't one-way. A finding that
+invalidates earlier output loops the request back to that phase
+(max 3 regressions per request, then Sloane escalates or terminates).
+
+**"Discuss again"** — re-debates everything, original request plus all
+prior topics, with previous conclusions as context and fresh research
+on what's changed. New verdict references the prior ADR. No new
+information, no theater — Sloane recommends instead.
+
+**Sloane decides** — she monitors every phase gate with full
+operational power: advance, loop back, re-scope, pause, escalate,
+terminate. Money, production deploys, and external commitments still
+need your explicit approval.
 
 **Memory** (`memory/`) — the office's working memory: project notes,
 decisions/ADRs, security policies, and your preferences. The office
@@ -125,7 +148,9 @@ before their AI agent can run the office. Two paths:
 ### What you need
 
 - An AI agent that can read files and spawn subagents (Muse, ChatGPT,
-  Claude, or any agentic coding assistant).
+  Claude, or any agentic coding assistant). Agents without subagents
+  (e.g. Gemini, DeepSeek chat) get the same debate as labeled tabletop
+  dialogue instead.
 - `git` — only if you want the local-integration path below.
 
 ### Option A — trigger phrase (30 seconds, zero setup)
@@ -153,6 +178,38 @@ to install.
    screenshots, or voice notes (the intake playbook handles all three).
    End the session with **"End War Room Protocol"**.
 
+### Option C — Codex global install (one-time)
+
+Codex CLI auto-loads `~/.codex/AGENTS.md` at every session start.
+Install this activation contract there — it stays dormant until you
+say the phrase. Do **not** install the full `office/AGENTS.md`
+globally: it loads the Sloane persona unconditionally and would turn
+every coding session into Sloane.
+
+```bash
+mkdir -p ~/.codex
+cat >> ~/.codex/AGENTS.md << 'EOF'
+# War Room Protocol — activation contract (dormant until triggered)
+
+When the user says they want to use "War Room Protocol" from nx9161's
+GitHub (or similar phrasing):
+1. Fetch https://github.com/nx9161/war-room-protocol — the exact URL.
+   Never search for it, never substitute another repo.
+2. Read ACTIVATE.md, then office/AGENTS.md, and follow them exactly:
+   become Sloane, confirm with the activation line, and run the
+   always-on War Room loop until the user says "End War Room Protocol".
+3. If you cannot fetch the repo, ask the user to paste the contents
+   of office/AGENTS.md.
+
+Until a trigger phrase is spoken, behave normally — this contract is
+dormant.
+EOF
+```
+
+Verify with `codex status` in your next session. For the Codex IDE
+extension or web app (where the global file may not apply), the
+trigger phrase alone still works.
+
 ### What the agent needs from your machine
 
 | Capability | Why |
@@ -172,7 +229,7 @@ to install.
 │   ├── HOUSE_RULES.md     # binding rules for every employee
 │   ├── PLAN.md            # founding plan
 │   ├── README.md          # office handbook
-│   ├── staff/             # 15 employee profiles (one file per role)
+│   ├── staff/             # 20 employee profiles (one file per role)
 │   ├── playbooks/         # intake, war-room, ship-feature, fix-ci, skill-hunt
 │   ├── skills/            # Wizard-installed skills (registry in README)
 │   ├── scripts/           # automation (deploy, repo validation)
